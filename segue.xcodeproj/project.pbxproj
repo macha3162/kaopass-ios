@@ -12,6 +12,10 @@
 		85F542B31F3971C4005AE3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F542B11F3971C4005AE3E9 /* Main.storyboard */; };
 		85F542B51F3971C4005AE3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F542B41F3971C4005AE3E9 /* Assets.xcassets */; };
 		85F542B81F3971C4005AE3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F542B61F3971C4005AE3E9 /* LaunchScreen.storyboard */; };
+		85F542C01F397401005AE3E9 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542BF1F397401005AE3E9 /* NextViewController.swift */; };
+		85F542C21F397454005AE3E9 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542C11F397454005AE3E9 /* FinalViewController.swift */; };
+		85F542C61F397F45005AE3E9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542C51F397F45005AE3E9 /* SearchViewController.swift */; };
+		85F542C81F398567005AE3E9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F542C71F398567005AE3E9 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		85F542B41F3971C4005AE3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F542B71F3971C4005AE3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85F542B91F3971C4005AE3E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85F542BF1F397401005AE3E9 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		85F542C11F397454005AE3E9 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		85F542C51F397F45005AE3E9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		85F542C71F398567005AE3E9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */,
+				85F542C71F398567005AE3E9 /* logo.png */,
 				85F542AF1F3971C4005AE3E9 /* ViewController.swift */,
 				85F542B11F3971C4005AE3E9 /* Main.storyboard */,
+				85F542C11F397454005AE3E9 /* FinalViewController.swift */,
+				85F542C51F397F45005AE3E9 /* SearchViewController.swift */,
+				85F542BF1F397401005AE3E9 /* NextViewController.swift */,
 				85F542B41F3971C4005AE3E9 /* Assets.xcassets */,
 				85F542B61F3971C4005AE3E9 /* LaunchScreen.storyboard */,
 				85F542B91F3971C4005AE3E9 /* Info.plist */,
@@ -96,7 +108,7 @@
 				TargetAttributes = {
 					85F542A91F3971C4005AE3E9 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = EY8RGLV2Q7;
+						DevelopmentTeam = L539A84Y3H;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F542C81F398567005AE3E9 /* logo.png in Resources */,
 				85F542B81F3971C4005AE3E9 /* LaunchScreen.storyboard in Resources */,
 				85F542B51F3971C4005AE3E9 /* Assets.xcassets in Resources */,
 				85F542B31F3971C4005AE3E9 /* Main.storyboard in Resources */,
@@ -137,7 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F542C61F397F45005AE3E9 /* SearchViewController.swift in Sources */,
 				85F542B01F3971C4005AE3E9 /* ViewController.swift in Sources */,
+				85F542C21F397454005AE3E9 /* FinalViewController.swift in Sources */,
+				85F542C01F397401005AE3E9 /* NextViewController.swift in Sources */,
 				85F542AE1F3971C4005AE3E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EY8RGLV2Q7;
+				DEVELOPMENT_TEAM = L539A84Y3H;
 				INFOPLIST_FILE = segue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omishima-works.segue";
@@ -274,7 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EY8RGLV2Q7;
+				DEVELOPMENT_TEAM = L539A84Y3H;
 				INFOPLIST_FILE = segue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omishima-works.segue";
@@ -302,6 +318,7 @@
 				85F542BE1F3971C4005AE3E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
