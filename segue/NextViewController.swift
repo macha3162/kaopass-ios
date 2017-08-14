@@ -12,16 +12,29 @@ class NextViewController: UIViewController, UIWebViewDelegate {
     
     
     var userId = 0
-    let initialUrl = URL(string: "http://192.168.3.16:5000/demo/")
     
     @IBOutlet weak var webView: UIWebView!
     
     func webViewDidStartLoad(_ webView: UIWebView) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        print("start!!")
+        print(webView.request?.url?.absoluteString as! String)
+        print("start")
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        print(webView.request?.url?.absoluteString as! String)
+        print("webViewDidFinishLoad")
+        
+        if((webView.request?.url?.absoluteString as! String) == "http://192.168.3.16:3000/users/\(userId)/signatures"){
+            print("kita!!")
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextView = storyboard.instantiateViewController(withIdentifier: "thank_you") as! FinalViewController
+            self.present(nextView, animated: true, completion: nil)
+        }
+ 
+        
     }
     
     
@@ -34,14 +47,16 @@ class NextViewController: UIViewController, UIWebViewDelegate {
         
         self.webView.delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let initialUrl = URL(string: "http://192.168.3.16:3000/users/\(self.userId)/signatures/new")
         let request = URLRequest(url: initialUrl!)
         self.webView.loadRequest(request)
         self.webView.dataDetectorTypes = .link
-        
-        // Do any additional setup after loading the view.
-        
-        print(userId)
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,15 +69,5 @@ class NextViewController: UIViewController, UIWebViewDelegate {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
