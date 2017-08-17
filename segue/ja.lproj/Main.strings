@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "新規登録"; ObjectID = "0lD-yi-Agj"; */
+"0lD-yi-Agj.normalTitle" = "新規登録";
+
+/* Class = "UILabel"; text = "次回から顔パスで入場いただけます！"; ObjectID = "1aS-bH-qzI"; */
+"1aS-bH-qzI.text" = "次回から顔パスで入場いただけます！";
+
+/* Class = "UIButton"; normalTitle = "Top画面へ"; ObjectID = "F5H-GG-nB7"; */
+"F5H-GG-nB7.normalTitle" = "Top画面へ";
+
+/* Class = "UIButton"; normalTitle = "検索"; ObjectID = "Kuk-Qn-Z7K"; */
+"Kuk-Qn-Z7K.normalTitle" = "検索";
+
+/* Class = "UILabel"; text = "チェックイン完了"; ObjectID = "f6e-fh-OeO"; */
+"f6e-fh-OeO.text" = "チェックイン完了";
+
+/* Class = "UIButton"; normalTitle = "チェックイン"; ObjectID = "qKH-sp-XIL"; */
+"qKH-sp-XIL.normalTitle" = "チェックイン";
+
+/* Class = "UILabel"; text = "Thank You!"; ObjectID = "t4L-0T-BG5"; */
+"t4L-0T-BG5.text" = "Thank You!";
+
+/* Class = "UIButton"; normalTitle = "戻る"; ObjectID = "zm6-ga-kna"; */
+"zm6-ga-kna.normalTitle" = "戻る";

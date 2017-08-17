@@ -32,7 +32,7 @@ class ViewController: UIViewController {
             var keepAlive = true
             let runLoop = RunLoop.current
             
-            Alamofire.request("http://192.168.3.16:3000/api/users", method: .post).responseJSON {
+            Alamofire.request("\(Settings.apiBaseUrl)/api/users", method: .post).responseJSON {
                 response in
                 if response.result.isSuccess {
                     //まずJSONデータをNSDictionary型に

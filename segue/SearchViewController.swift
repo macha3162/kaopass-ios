@@ -9,13 +9,23 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print(123)
+        
     }
-
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // 72C90001-57A9-4D40-B746-534E22EC9F9E
+        
+    }
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C5C0D65BBA4A0F016B5AAEA /* Pods_segue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61ED1A56EB8C92FD3098E311 /* Pods_segue.framework */; };
+		854001851F41874D0036FD04 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854001841F41874D0036FD04 /* CoreImage.framework */; };
+		8540018B1F440B750036FD04 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8540018A1F440B750036FD04 /* CoreBluetooth.framework */; };
+		8540018D1F451D550036FD04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8540018C1F451D550036FD04 /* Settings.swift */; };
 		85F542AE1F3971C4005AE3E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */; };
 		85F542B01F3971C4005AE3E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AF1F3971C4005AE3E9 /* ViewController.swift */; };
 		85F542B31F3971C4005AE3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F542B11F3971C4005AE3E9 /* Main.storyboard */; };
@@ -23,6 +26,12 @@
 /* Begin PBXFileReference section */
 		5B9ED8D75895119D50E84630 /* Pods-segue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-segue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-segue/Pods-segue.debug.xcconfig"; sourceTree = "<group>"; };
 		61ED1A56EB8C92FD3098E311 /* Pods_segue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_segue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		854001841F41874D0036FD04 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		854001861F427B370036FD04 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		854001871F427B370036FD04 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		854001881F44018B0036FD04 /* BluetoothKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BluetoothKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/segue-gyphsbimejnfonayiiecrrygrfsx/Build/Products/Debug-iphoneos/BluetoothKit/BluetoothKit.framework"; sourceTree = "<group>"; };
+		8540018A1F440B750036FD04 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8540018C1F451D550036FD04 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		85F542AA1F3971C4005AE3E9 /* segue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = segue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F542AF1F3971C4005AE3E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8540018B1F440B750036FD04 /* CoreBluetooth.framework in Frameworks */,
+				854001851F41874D0036FD04 /* CoreImage.framework in Frameworks */,
 				4C5C0D65BBA4A0F016B5AAEA /* Pods_segue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +73,9 @@
 		3E02831C790A254D9636E2DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8540018A1F440B750036FD04 /* CoreBluetooth.framework */,
+				854001881F44018B0036FD04 /* BluetoothKit.framework */,
+				854001841F41874D0036FD04 /* CoreImage.framework */,
 				61ED1A56EB8C92FD3098E311 /* Pods_segue.framework */,
 			);
 			name = Frameworks;
@@ -88,9 +102,10 @@
 		85F542AC1F3971C4005AE3E9 /* segue */ = {
 			isa = PBXGroup;
 			children = (
-				85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */,
 				85F542C71F398567005AE3E9 /* logo.png */,
 				85F542CF1F3D0ED6005AE3E9 /* bg.png */,
+				85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */,
+				8540018C1F451D550036FD04 /* Settings.swift */,
 				85F542AF1F3971C4005AE3E9 /* ViewController.swift */,
 				85F542BF1F397401005AE3E9 /* NextViewController.swift */,
 				85F542C11F397454005AE3E9 /* FinalViewController.swift */,
@@ -235,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8540018D1F451D550036FD04 /* Settings.swift in Sources */,
 				85F542C61F397F45005AE3E9 /* SearchViewController.swift in Sources */,
 				85F542B01F3971C4005AE3E9 /* ViewController.swift in Sources */,
 				85F542C21F397454005AE3E9 /* FinalViewController.swift in Sources */,
@@ -250,6 +266,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				85F542B21F3971C4005AE3E9 /* Base */,
+				854001861F427B370036FD04 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -258,6 +275,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				85F542B71F3971C4005AE3E9 /* Base */,
+				854001871F427B370036FD04 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -269,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -319,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -366,9 +386,10 @@
 				DEVELOPMENT_TEAM = L539A84Y3H;
 				INFOPLIST_FILE = segue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.omishima-works.segue";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.synergy-marketing.kaopass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -380,9 +401,10 @@
 				DEVELOPMENT_TEAM = L539A84Y3H;
 				INFOPLIST_FILE = segue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.omishima-works.segue";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.synergy-marketing.kaopass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
