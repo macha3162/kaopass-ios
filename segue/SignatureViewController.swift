@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 
-class NextViewController: ImageViewBaseController, UIWebViewDelegate {
+class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
     
     var userId = 0
 
@@ -42,7 +42,7 @@ class NextViewController: ImageViewBaseController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photoTimer = Timer.scheduledTimer(timeInterval: photoInterval, target: self, selector: #selector(NextViewController.takeStillPicture), userInfo: nil, repeats: true)
+        photoTimer = Timer.scheduledTimer(timeInterval: photoInterval, target: self, selector: #selector(SignatureViewController.takeStillPicture), userInfo: nil, repeats: true)
         self.webView.delegate = self
     }
     

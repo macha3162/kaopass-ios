@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="32.8125" y="35.9375"/>
         </scene>
-        <!--Next View Controller-->
+        <!--Signature View Controller-->
         <scene sceneID="I11-p3-Su9">
             <objects>
-                <viewController id="gxL-pO-rjN" customClass="NextViewController" customModule="segue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gxL-pO-rjN" customClass="SignatureViewController" customModule="segue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ocv-w6-xMn"/>
                         <viewControllerLayoutGuide type="bottom" id="0CY-Ez-ATc"/>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPb-vX-70J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461" y="11"/>
+            <point key="canvasLocation" x="1460.7421875" y="10.9375"/>
         </scene>
         <!--Final View Controller-->
         <scene sceneID="aJy-HW-B02">

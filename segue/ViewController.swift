@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         if(segue.identifier == "registration"){
             print("新規登録行きますわ")
             
-            let nextView = segue.destination as! NextViewController
+            let nextView = segue.destination as! SignatureViewController
             
             var keepAlive = true
             let runLoop = RunLoop.current
