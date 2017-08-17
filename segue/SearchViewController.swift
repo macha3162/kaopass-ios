@@ -8,22 +8,17 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: ImageViewBaseController {
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(123)
-        
     }
     
     
-    
     override func viewWillAppear(_ animated: Bool) {
-        
-        // 72C90001-57A9-4D40-B746-534E22EC9F9E
-        
+        setupDisplay()
+        setupCamera()
     }
   
     override func didReceiveMemoryWarning() {
@@ -31,15 +26,9 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        clearData()
+        print("呼ばれた")
     }
-    */
-
 }

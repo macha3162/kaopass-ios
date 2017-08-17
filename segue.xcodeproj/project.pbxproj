@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4C5C0D65BBA4A0F016B5AAEA /* Pods_segue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61ED1A56EB8C92FD3098E311 /* Pods_segue.framework */; };
 		854001851F41874D0036FD04 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854001841F41874D0036FD04 /* CoreImage.framework */; };
-		8540018B1F440B750036FD04 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8540018A1F440B750036FD04 /* CoreBluetooth.framework */; };
 		8540018D1F451D550036FD04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8540018C1F451D550036FD04 /* Settings.swift */; };
+		854001911F4561A30036FD04 /* ImageViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001901F4561A30036FD04 /* ImageViewBaseController.swift */; };
 		85F542AE1F3971C4005AE3E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */; };
 		85F542B01F3971C4005AE3E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AF1F3971C4005AE3E9 /* ViewController.swift */; };
 		85F542B31F3971C4005AE3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F542B11F3971C4005AE3E9 /* Main.storyboard */; };
@@ -32,6 +32,7 @@
 		854001881F44018B0036FD04 /* BluetoothKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BluetoothKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/segue-gyphsbimejnfonayiiecrrygrfsx/Build/Products/Debug-iphoneos/BluetoothKit/BluetoothKit.framework"; sourceTree = "<group>"; };
 		8540018A1F440B750036FD04 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		8540018C1F451D550036FD04 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		854001901F4561A30036FD04 /* ImageViewBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewBaseController.swift; sourceTree = "<group>"; };
 		85F542AA1F3971C4005AE3E9 /* segue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = segue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F542AF1F3971C4005AE3E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8540018B1F440B750036FD04 /* CoreBluetooth.framework in Frameworks */,
 				854001851F41874D0036FD04 /* CoreImage.framework in Frameworks */,
 				4C5C0D65BBA4A0F016B5AAEA /* Pods_segue.framework in Frameworks */,
 			);
@@ -108,6 +108,7 @@
 				8540018C1F451D550036FD04 /* Settings.swift */,
 				85F542AF1F3971C4005AE3E9 /* ViewController.swift */,
 				85F542BF1F397401005AE3E9 /* NextViewController.swift */,
+				854001901F4561A30036FD04 /* ImageViewBaseController.swift */,
 				85F542C11F397454005AE3E9 /* FinalViewController.swift */,
 				85F542C51F397F45005AE3E9 /* SearchViewController.swift */,
 				85F542B11F3971C4005AE3E9 /* Main.storyboard */,
@@ -255,6 +256,7 @@
 				85F542B01F3971C4005AE3E9 /* ViewController.swift in Sources */,
 				85F542C21F397454005AE3E9 /* FinalViewController.swift in Sources */,
 				85F542C01F397401005AE3E9 /* NextViewController.swift in Sources */,
+				854001911F4561A30036FD04 /* ImageViewBaseController.swift in Sources */,
 				85F542AE1F3971C4005AE3E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
