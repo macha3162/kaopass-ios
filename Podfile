@@ -7,4 +7,5 @@ target 'segue' do
 
   # Pods for segue
   pod 'Alamofire', '~> 4.4'
+  pod 'SwiftyJSON'
 end

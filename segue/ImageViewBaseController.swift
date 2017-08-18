@@ -71,15 +71,15 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         }
         
         // ピクセルフォーマットを 32bit BGR + A とする
-        output.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable : Int(kCVPixelFormatType_32BGRA)]
+        output?.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable : Int(kCVPixelFormatType_32BGRA)]
         
         // フレームをキャプチャするためのサブスレッド用のシリアルキューを用意
-        output.setSampleBufferDelegate(self, queue: DispatchQueue.main)
-        
-        output.alwaysDiscardsLateVideoFrames = true
+        output?.setSampleBufferDelegate(self, queue: DispatchQueue.main)
+        // キューのブロック中に新しいフレームが来たら削除する
+        output?.alwaysDiscardsLateVideoFrames = true
         
         // ビデオ出力に接続
-        //        let connection  = output.connection(withMediaType: AVMediaTypeVideo)
+        // let connection  = output.connection(withMediaType: AVMediaTypeVideo)
         
         session.startRunning()
         
@@ -88,7 +88,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         do {
             try camera.lockForConfiguration()
             // フレームレート
-            camera.activeVideoMinFrameDuration = CMTimeMake(1, 30)
+            camera.activeVideoMinFrameDuration = CMTimeMake(1, 10)
             
             camera.unlockForConfiguration()
         } catch _ {
@@ -138,6 +138,8 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         
         let imageRef:CGImage = newContext.makeImage()!
         let resultImage = UIImage(cgImage: imageRef, scale: 1.0, orientation: UIImageOrientation.right)
+        
+         CVPixelBufferUnlockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: 0))
         
         return resultImage
     }
@@ -194,6 +196,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         }
         session = nil
         camera = nil
+        imageView = nil
     }
 
     override func viewDidLoad() {

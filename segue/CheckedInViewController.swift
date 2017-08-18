@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FinalViewController: UIViewController {
+class CheckedInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

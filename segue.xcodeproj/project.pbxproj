@@ -12,12 +12,12 @@
 		8540018D1F451D550036FD04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8540018C1F451D550036FD04 /* Settings.swift */; };
 		854001911F4561A30036FD04 /* ImageViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001901F4561A30036FD04 /* ImageViewBaseController.swift */; };
 		85F542AE1F3971C4005AE3E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */; };
-		85F542B01F3971C4005AE3E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AF1F3971C4005AE3E9 /* ViewController.swift */; };
+		85F542B01F3971C4005AE3E9 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AF1F3971C4005AE3E9 /* TopViewController.swift */; };
 		85F542B31F3971C4005AE3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F542B11F3971C4005AE3E9 /* Main.storyboard */; };
 		85F542B51F3971C4005AE3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F542B41F3971C4005AE3E9 /* Assets.xcassets */; };
 		85F542B81F3971C4005AE3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F542B61F3971C4005AE3E9 /* LaunchScreen.storyboard */; };
 		85F542C01F397401005AE3E9 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542BF1F397401005AE3E9 /* SignatureViewController.swift */; };
-		85F542C21F397454005AE3E9 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542C11F397454005AE3E9 /* FinalViewController.swift */; };
+		85F542C21F397454005AE3E9 /* CheckedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542C11F397454005AE3E9 /* CheckedInViewController.swift */; };
 		85F542C61F397F45005AE3E9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542C51F397F45005AE3E9 /* SearchViewController.swift */; };
 		85F542C81F398567005AE3E9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F542C71F398567005AE3E9 /* logo.png */; };
 		85F542D01F3D0ED6005AE3E9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F542CF1F3D0ED6005AE3E9 /* bg.png */; };
@@ -35,13 +35,13 @@
 		854001901F4561A30036FD04 /* ImageViewBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewBaseController.swift; sourceTree = "<group>"; };
 		85F542AA1F3971C4005AE3E9 /* segue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = segue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85F542AF1F3971C4005AE3E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85F542AF1F3971C4005AE3E9 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		85F542B21F3971C4005AE3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85F542B41F3971C4005AE3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F542B71F3971C4005AE3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85F542B91F3971C4005AE3E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85F542BF1F397401005AE3E9 /* SignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
-		85F542C11F397454005AE3E9 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		85F542C11F397454005AE3E9 /* CheckedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckedInViewController.swift; sourceTree = "<group>"; };
 		85F542C51F397F45005AE3E9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		85F542C71F398567005AE3E9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		85F542CF1F3D0ED6005AE3E9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
@@ -106,10 +106,10 @@
 				85F542CF1F3D0ED6005AE3E9 /* bg.png */,
 				85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */,
 				8540018C1F451D550036FD04 /* Settings.swift */,
-				85F542AF1F3971C4005AE3E9 /* ViewController.swift */,
-				85F542BF1F397401005AE3E9 /* SignatureViewController.swift */,
+				85F542AF1F3971C4005AE3E9 /* TopViewController.swift */,
 				854001901F4561A30036FD04 /* ImageViewBaseController.swift */,
-				85F542C11F397454005AE3E9 /* FinalViewController.swift */,
+				85F542BF1F397401005AE3E9 /* SignatureViewController.swift */,
+				85F542C11F397454005AE3E9 /* CheckedInViewController.swift */,
 				85F542C51F397F45005AE3E9 /* SearchViewController.swift */,
 				85F542B11F3971C4005AE3E9 /* Main.storyboard */,
 				85F542B41F3971C4005AE3E9 /* Assets.xcassets */,
@@ -219,10 +219,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-segue/Pods-segue-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -253,8 +255,8 @@
 			files = (
 				8540018D1F451D550036FD04 /* Settings.swift in Sources */,
 				85F542C61F397F45005AE3E9 /* SearchViewController.swift in Sources */,
-				85F542B01F3971C4005AE3E9 /* ViewController.swift in Sources */,
-				85F542C21F397454005AE3E9 /* FinalViewController.swift in Sources */,
+				85F542B01F3971C4005AE3E9 /* TopViewController.swift in Sources */,
+				85F542C21F397454005AE3E9 /* CheckedInViewController.swift in Sources */,
 				85F542C01F397401005AE3E9 /* SignatureViewController.swift in Sources */,
 				854001911F4561A30036FD04 /* ImageViewBaseController.swift in Sources */,
 				85F542AE1F3971C4005AE3E9 /* AppDelegate.swift in Sources */,

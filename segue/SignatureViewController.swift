@@ -30,7 +30,7 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
         
         if((webView.request?.url?.absoluteString)! == "\(Settings.apiBaseUrl)/users/\(userId)/signatures"){
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextView = storyboard.instantiateViewController(withIdentifier: "thank_you") as! FinalViewController
+            let nextView = storyboard.instantiateViewController(withIdentifier: "thank_you") as! CheckedInViewController
             self.present(nextView, animated: true, completion: nil)
         }
     }

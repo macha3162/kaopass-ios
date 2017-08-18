@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class TopViewController: UIViewController {
     
     var myCount = "0"
 
@@ -25,8 +25,6 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "registration"){
-            print("新規登録行きますわ")
-            
             let nextView = segue.destination as! SignatureViewController
             
             var keepAlive = true
@@ -35,11 +33,7 @@ class ViewController: UIViewController {
             Alamofire.request("\(Settings.apiBaseUrl)/api/users", method: .post).responseJSON {
                 response in
                 if response.result.isSuccess {
-                    //まずJSONデータをNSDictionary型に
                     let jsonDic = response.result.value as! NSDictionary
-                    //辞書化したjsonDicからキー値"responseData"を取り出す
-                    print(jsonDic["id"] as! Int64)
-                    print("とれるか")
                      nextView.userId = Int(jsonDic["id"] as! Int64)
                 }
                 keepAlive = false
