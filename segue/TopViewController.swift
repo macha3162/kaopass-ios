@@ -50,8 +50,3 @@ class TopViewController: UIViewController {
     
     }
 }
-
-
-
-
-

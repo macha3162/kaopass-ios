@@ -27,8 +27,6 @@
 		5B9ED8D75895119D50E84630 /* Pods-segue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-segue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-segue/Pods-segue.debug.xcconfig"; sourceTree = "<group>"; };
 		61ED1A56EB8C92FD3098E311 /* Pods_segue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_segue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		854001841F41874D0036FD04 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		854001861F427B370036FD04 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		854001871F427B370036FD04 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		854001881F44018B0036FD04 /* BluetoothKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BluetoothKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/segue-gyphsbimejnfonayiiecrrygrfsx/Build/Products/Debug-iphoneos/BluetoothKit/BluetoothKit.framework"; sourceTree = "<group>"; };
 		8540018A1F440B750036FD04 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		8540018C1F451D550036FD04 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				85F542B21F3971C4005AE3E9 /* Base */,
-				854001861F427B370036FD04 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -279,7 +276,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				85F542B71F3971C4005AE3E9 /* Base */,
-				854001871F427B370036FD04 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

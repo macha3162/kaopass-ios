@@ -13,6 +13,7 @@ import SwiftyJSON
 
 class SearchViewController: ImageViewBaseController {
     
+    @IBOutlet weak var messageLabel: UILabel!
     let synthesizer = AVSpeechSynthesizer()
     let runLoop = RunLoop.current
     
@@ -50,12 +51,13 @@ class SearchViewController: ImageViewBaseController {
                                         .responseJSON { response in
                                             if response.result.isSuccess {
                                                 let statusCode = response.response?.statusCode
-                                                print(statusCode)
+                                                print(statusCode as Any)
                                                 if statusCode == 200 {
                                                     let json = JSON(response.result.value!)
                                                     print(json["id"])
+                                                    
                                                     self.readText(string: "こんにちは！\(json["name"].stringValue)さん")
-                                                    self.readText(string: "2回目の来場です")
+                                                    self.readText(string: "\(json["visit_count"])回目の来場です")
                                                 }else{
                                                     self.readText(string: "未登録です")
                                                 }
@@ -83,6 +85,7 @@ class SearchViewController: ImageViewBaseController {
         }
         print(string)
         print("-------------------")
+        messageLabel.text = string
         let utterWords = AVSpeechUtterance(string: string)
         utterWords.voice = AVSpeechSynthesisVoice(language: "ja-JP")
         synthesizer.speak(utterWords)

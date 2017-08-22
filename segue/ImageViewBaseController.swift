@@ -139,11 +139,11 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         let imageRef:CGImage = newContext.makeImage()!
         let resultImage = UIImage(cgImage: imageRef, scale: 1.0, orientation: UIImageOrientation.right)
         
-         CVPixelBufferUnlockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: 0))
+        CVPixelBufferUnlockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: 0))
         
         return resultImage
     }
-
+    
     
     // Create body for media
     func createBodyWith(parameters: [String: String]?, filePathKey: String?, imageData: Data, boundary: String) -> NSData {
@@ -185,26 +185,27 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
     }
     
     func clearData(){
-        session.stopRunning()
-        
-        for output in session.outputs {
-            session.removeOutput(output as? AVCaptureOutput)
-        }
-        
-        for input in session.inputs {
-            session.removeInput(input as? AVCaptureInput)
+        if session != nil{
+            session.stopRunning()
+            for output in session.outputs {
+                session.removeOutput(output as? AVCaptureOutput)
+            }
+            
+            for input in session.inputs {
+                session.removeInput(input as? AVCaptureInput)
+            }
         }
         session = nil
         camera = nil
         imageView = nil
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
