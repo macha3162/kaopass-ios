@@ -7,8 +7,8 @@
 //
 
 struct Settings {
-    //static var apiBaseUrl = "https://kaopass.herokuapp.com"
-    static var apiBaseUrl = "http://192.168.3.5:3000"
+    static var apiBaseUrl = "https://kaopass.herokuapp.com"
+    // static var apiBaseUrl = "http://192.168.3.5:3000"
 }
 
 import UIKit

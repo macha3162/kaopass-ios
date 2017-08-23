@@ -106,7 +106,8 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         DispatchQueue.main.async {
             self.imageView.image = image
             // 画像を反転
-            self.imageView.transform = CGAffineTransform(scaleX: -1, y: 1)
+
+            //self.imageView.transform = CGAffineTransform(scaleX: -1, y: 1)
             
             // UIImageViewをビューに追加
             self.view.addSubview(self.imageView)
@@ -137,7 +138,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         let newContext:CGContext = CGContext(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace,  bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue|CGBitmapInfo.byteOrder32Little.rawValue)!
         
         let imageRef:CGImage = newContext.makeImage()!
-        let resultImage = UIImage(cgImage: imageRef, scale: 1.0, orientation: UIImageOrientation.right)
+        let resultImage = UIImage(cgImage: imageRef, scale: 1.0, orientation: UIImageOrientation.upMirrored)
         
         CVPixelBufferUnlockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: 0))
         
@@ -178,7 +179,8 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         let resizedSize = CGSize(width: width, height: width * Double(aspectRate))
         // リサイズ後のUIImageを生成して返却
         UIGraphicsBeginImageContext(resizedSize)
-        image.draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        //image.draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        image.draw(in: CGRect(x: 0, y: 0, width: resizedSize.height, height: resizedSize.width))
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return resizedImage!
