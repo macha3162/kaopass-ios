@@ -21,7 +21,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
     let mimetype = "image/jpeg"
     let CRLF = "\r\n"
     
-    func setupDisplay(){
+    func setupDisplay(hidden: Bool){
         //スクリーンの幅
         let screenWidth = UIScreen.main.bounds.size.width/4;
         //スクリーンの高さ
@@ -30,6 +30,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         // プレビュー用のビューを生成
         imageView = UIImageView()
         imageView.frame = CGRect(x: UIScreen.main.bounds.size.width - screenWidth, y: 0.0, width: screenWidth, height: screenHeight)
+        imageView.isHidden = hidden
     }
     
     func setupCamera(){
@@ -213,3 +214,4 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         // Dispose of any resources that can be recreated.
     }
 }
+

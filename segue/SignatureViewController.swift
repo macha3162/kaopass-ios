@@ -29,9 +29,10 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
         if((webView.request?.url?.absoluteString)! == "\(Settings.apiBaseUrl)/users/\(userId)/signatures"){
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextView = storyboard.instantiateViewController(withIdentifier: "thank_you") as! CheckedInViewController
-            self.present(nextView, animated: true, completion: nil)
+            let naviView = self.storyboard!.instantiateViewController(withIdentifier: "session_navigation") as! UINavigationController
+            let view = naviView.topViewController as! TimeTableViewController
+            view.userId = self.userId
+            self.present(naviView, animated: true, completion: nil)
         }
     }
     
@@ -52,7 +53,7 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
         self.webView.loadRequest(request)
         self.webView.dataDetectorTypes = .link
         
-        setupDisplay()
+        setupDisplay(hidden: true)
         setupCamera()
     }
     
@@ -72,8 +73,9 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
                 let params: [String: String] = ["access_token": "dummy"]
                 
                 // imageData生成
-                let resizedImage = self.imageView.image?.convert(toSize:CGSize(width:600.0, height:800.0), scale: 1.0)
-                let imageData = UIImageJPEGRepresentation((resizedImage?.updateImageOrientionUpSide())! , 0.1)!
+                let size = CGFloat(Settings.puloadImageSize)
+                let resizedImage = self.imageView.image?.convert(toSize:CGSize(width: ((self.imageView.image?.size.width)! * size), height:((self.imageView.image?.size.height)! * size)), scale: 1.0)
+                let imageData = UIImageJPEGRepresentation((resizedImage?.updateImageOrientionUpSide())! , 0.2)!
                 
                 // boudary生成
                 let boundary = generateBoundaryString()

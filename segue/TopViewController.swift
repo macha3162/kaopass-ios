@@ -8,23 +8,21 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class TopViewController: UIViewController {
-    
-    var myCount = "0"
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "registration"){
+        if(segue.identifier == "start_registration"){
             let nextView = segue.destination as! SignatureViewController
             
             var keepAlive = true
@@ -33,8 +31,8 @@ class TopViewController: UIViewController {
             Alamofire.request("\(Settings.apiBaseUrl)/api/users", method: .post).responseJSON {
                 response in
                 if response.result.isSuccess {
-                    let jsonDic = response.result.value as! NSDictionary
-                     nextView.userId = Int(jsonDic["id"] as! Int64)
+                    let json = JSON(response.result.value!)
+                     nextView.userId = json["id"].int!
                 }
                 keepAlive = false
             }

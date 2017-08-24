@@ -19,7 +19,9 @@ class SearchViewController: ImageViewBaseController {
     
     
     @IBAction func reEntry(_ sender: Any) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         takeStillPicture()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
     func takeStillPicture(){
@@ -27,12 +29,11 @@ class SearchViewController: ImageViewBaseController {
             
             // アルバムに追加
             // UIImageWriteToSavedPhotosAlbum(self.imageView.image!, self, nil, nil)
-            
-            
+
             // imageData生成
-            //let resizedImage = self.imageView.image?.convert(toSize:CGSize(width:600.0, height:800.0), scale: 1.0)
-            let resizedImage = self.imageView.image?.convert(toSize:CGSize(width:300.0, height:400.0), scale: 1.0)
-            let imageData = UIImageJPEGRepresentation((resizedImage?.updateImageOrientionUpSide())! , 0.1)!
+            let size = CGFloat(Settings.searchImageSize)
+            let resizedImage = self.imageView.image?.convert(toSize:CGSize(width: ((self.imageView.image?.size.width)! * size), height:((self.imageView.image?.size.height)! * size)), scale: 1.0)
+            let imageData = UIImageJPEGRepresentation((resizedImage?.updateImageOrientionUpSide())! , 0.2)!
             
             Alamofire.upload(multipartFormData: { (multipartFormData) in
                 multipartFormData.append(imageData,
@@ -98,7 +99,7 @@ class SearchViewController: ImageViewBaseController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        setupDisplay()
+        setupDisplay(hidden: false)
         setupCamera()
     }
     

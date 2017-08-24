@@ -6,14 +6,41 @@
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.
 //
 
+
 import UIKit
+import Alamofire
 import SwiftyJSON
 
 class TimeTableViewController: UITableViewController {
     
+    var userId = 0
+    
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "finish_registration"){
+            let params = ["session_numbers": getSelectedRowIds()]
+            
+            Alamofire.request("\(Settings.apiBaseUrl)/api/users/\(userId)/session_histories", method: .post, parameters: params).responseJSON {
+                response in
+                if response.result.isSuccess {}
+            }
+            
+            self.present(self.storyboard!.instantiateViewController(withIdentifier: "thank_you"), animated: true)            
+        }
+    }
+    
+    
     @IBAction func doneClick(_ sender: Any) {
-        self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "thank_you"), animated: true)
+        
+        let params = ["session_numbers": getSelectedRowIds()]
+        
+        Alamofire.request("\(Settings.apiBaseUrl)/api/users/\(userId)/session_histories", method: .post, parameters: params).responseJSON {
+            response in
+            if response.result.isSuccess {}
+        }
+        
+        self.present(self.storyboard!.instantiateViewController(withIdentifier: "thank_you"), animated: true)
     }
     var tableData: JSON = []
     
@@ -76,7 +103,6 @@ class TimeTableViewController: UITableViewController {
         if let indexPaths = self.tableView.indexPathsForSelectedRows {
             for i in 0 ..< indexPaths.count {
                 numbers.append(indexPaths[i].row)
-                
             }
         }
         return numbers
