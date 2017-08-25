@@ -139,7 +139,8 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         let newContext:CGContext = CGContext(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace,  bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue|CGBitmapInfo.byteOrder32Little.rawValue)!
         
         let imageRef:CGImage = newContext.makeImage()!
-        let resultImage = UIImage(cgImage: imageRef, scale: 1.0, orientation: UIImageOrientation.upMirrored)
+        let orientation = (UIDevice.current.orientation == UIDeviceOrientation.landscapeRight) ? UIImageOrientation.upMirrored : UIImageOrientation.downMirrored
+        let resultImage = UIImage(cgImage: imageRef, scale: 1.0, orientation: orientation)
         
         CVPixelBufferUnlockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: 0))
         
