@@ -30,7 +30,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         // プレビュー用のビューを生成
         imageView = UIImageView()
         imageView.frame = CGRect(x: UIScreen.main.bounds.size.width - screenWidth, y: 0.0, width: screenWidth, height: screenHeight)
-        imageView.isHidden = hidden
+        imageView.isHidden = true
     }
     
     func setupCamera(){

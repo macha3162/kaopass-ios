@@ -31,24 +31,23 @@ class TimeTableViewController: UITableViewController {
     }
     
     
-    @IBAction func doneClick(_ sender: Any) {
-        
-        let params = ["session_numbers": getSelectedRowIds()]
-        
-        Alamofire.request("\(Settings.apiBaseUrl)/api/users/\(userId)/session_histories", method: .post, parameters: params).responseJSON {
-            response in
-            if response.result.isSuccess {}
-        }
-        
-        self.present(self.storyboard!.instantiateViewController(withIdentifier: "thank_you"), animated: true)
-    }
+//    @IBAction func doneClick(_ sender: Any) {
+//        
+//        let params = ["session_numbers": getSelectedRowIds()]
+//        
+//        Alamofire.request("\(Settings.apiBaseUrl)/api/users/\(userId)/session_histories", method: .post, parameters: params).responseJSON {
+//            response in
+//            if response.result.isSuccess {}
+//        }
+//        
+//        self.present(self.storyboard!.instantiateViewController(withIdentifier: "thank_you"), animated: true)
+//    }
     var tableData: JSON = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let path = Bundle.main.path(forResource: "sessions", ofType: "json")
-        
         let jsonStr = try? String(contentsOfFile: path!)
         tableData = JSON.parse(jsonStr!)
         
