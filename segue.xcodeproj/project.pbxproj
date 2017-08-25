@@ -14,6 +14,7 @@
 		8532F60E1F4FC22700E74F17 /* ecumerun_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F60D1F4FC22700E74F17 /* ecumerun_button2.png */; };
 		8532F6101F4FC2E000E74F17 /* hash_bs17.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F60F1F4FC2DF00E74F17 /* hash_bs17.png */; };
 		8532F6141F4FC9C300E74F17 /* kaopass_wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F6131F4FC9C300E74F17 /* kaopass_wall.png */; };
+		8532F6161F4FE4A800E74F17 /* backgraund.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F6151F4FE4A800E74F17 /* backgraund.png */; };
 		854001851F41874D0036FD04 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854001841F41874D0036FD04 /* CoreImage.framework */; };
 		8540018D1F451D550036FD04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8540018C1F451D550036FD04 /* Settings.swift */; };
 		854001911F4561A30036FD04 /* ImageViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001901F4561A30036FD04 /* ImageViewBaseController.swift */; };
@@ -45,7 +46,6 @@
 		85F542C01F397401005AE3E9 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542BF1F397401005AE3E9 /* SignatureViewController.swift */; };
 		85F542C21F397454005AE3E9 /* CheckedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542C11F397454005AE3E9 /* CheckedInViewController.swift */; };
 		85F542C61F397F45005AE3E9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542C51F397F45005AE3E9 /* SearchViewController.swift */; };
-		85F542D01F3D0ED6005AE3E9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F542CF1F3D0ED6005AE3E9 /* bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +57,7 @@
 		8532F60D1F4FC22700E74F17 /* ecumerun_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecumerun_button2.png; sourceTree = "<group>"; };
 		8532F60F1F4FC2DF00E74F17 /* hash_bs17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hash_bs17.png; sourceTree = "<group>"; };
 		8532F6131F4FC9C300E74F17 /* kaopass_wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kaopass_wall.png; sourceTree = "<group>"; };
+		8532F6151F4FE4A800E74F17 /* backgraund.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgraund.png; sourceTree = "<group>"; };
 		854001841F41874D0036FD04 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		854001881F44018B0036FD04 /* BluetoothKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BluetoothKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/segue-gyphsbimejnfonayiiecrrygrfsx/Build/Products/Debug-iphoneos/BluetoothKit/BluetoothKit.framework"; sourceTree = "<group>"; };
 		8540018A1F440B750036FD04 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -92,7 +93,6 @@
 		85F542BF1F397401005AE3E9 /* SignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 		85F542C11F397454005AE3E9 /* CheckedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckedInViewController.swift; sourceTree = "<group>"; };
 		85F542C51F397F45005AE3E9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		85F542CF1F3D0ED6005AE3E9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		DD4592FB8514C9DC8E06621A /* Pods-segue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-segue.release.xcconfig"; path = "Pods/Target Support Files/Pods-segue/Pods-segue.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +132,7 @@
 		854001941F4BF83A0036FD04 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8532F6151F4FE4A800E74F17 /* backgraund.png */,
 				8532F6131F4FC9C300E74F17 /* kaopass_wall.png */,
 				8532F6071F4FC05600E74F17 /* login_image.png */,
 				8532F6051F4FB3CA00E74F17 /* not_enter.gif */,
@@ -140,7 +141,6 @@
 				854001BD1F4D79260036FD04 /* login.png */,
 				8532F60B1F4FC1BC00E74F17 /* ecumerun_button.png */,
 				8532F60D1F4FC22700E74F17 /* ecumerun_button2.png */,
-				85F542CF1F3D0ED6005AE3E9 /* bg.png */,
 				854001B11F4CFFC10036FD04 /* logo.png */,
 				854001BB1F4D25E90036FD04 /* add.png */,
 				854001B91F4D252F0036FD04 /* search.png */,
@@ -268,12 +268,12 @@
 				8532F6101F4FC2E000E74F17 /* hash_bs17.png in Resources */,
 				854001AC1F4C53490036FD04 /* session_8.jpg in Resources */,
 				8540019E1F4C519F0036FD04 /* session_1.jpg in Resources */,
-				85F542D01F3D0ED6005AE3E9 /* bg.png in Resources */,
 				854001AA1F4C53450036FD04 /* session_7.jpg in Resources */,
 				854001B21F4CFFC10036FD04 /* logo.png in Resources */,
 				854001B01F4C537E0036FD04 /* session_10.jpg in Resources */,
 				854001A81F4C53210036FD04 /* session_6.jpg in Resources */,
 				8532F60E1F4FC22700E74F17 /* ecumerun_button2.png in Resources */,
+				8532F6161F4FE4A800E74F17 /* backgraund.png in Resources */,
 				85F542B81F3971C4005AE3E9 /* LaunchScreen.storyboard in Resources */,
 				854001C21F4E6DEC0036FD04 /* do-not-enter.gif in Resources */,
 				854001AE1F4C53790036FD04 /* session_9.jpg in Resources */,
