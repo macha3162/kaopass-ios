@@ -16,9 +16,11 @@ class SearchViewController: ImageViewBaseController {
     let synthesizer = AVSpeechSynthesizer()
     let runLoop = RunLoop.current
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var message: UILabel!
     @IBAction func reEntry(_ sender: Any) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        indicator.isHidden = false
+        indicator.startAnimating()
         
         let result = searchFace()
         print(result.statusCode)
@@ -39,8 +41,9 @@ class SearchViewController: ImageViewBaseController {
         default:
             self.readText(string: "顔が検出できませんでした")
         }
-
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        
+        indicator.stopAnimating()
+        indicator.isHidden = true
     }
     
     func searchFace() -> (statusCode: Int,json: JSON){
@@ -136,6 +139,7 @@ class SearchViewController: ImageViewBaseController {
         imageView.layer.cornerRadius = self.imageView.frame.size.width / 2.0
         
         setupCamera()
+        indicator.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {

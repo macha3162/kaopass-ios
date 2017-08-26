@@ -302,10 +302,13 @@
                                             <action selector="reEntry:" destination="Gw5-6e-SxA" eventType="touchUpInside" id="IwW-5V-unZ"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dBM-dE-ynT">
+                                        <rect key="frame" x="246" y="493" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGb-zA-cPH">
-                                        <rect key="frame" x="108" y="493" width="297" height="41"/>
+                                        <rect key="frame" x="108" y="521" width="297" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -313,7 +316,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Jfs-Ap-0Tq" firstAttribute="centerY" secondItem="OEa-e4-H6r" secondAttribute="centerY" constant="99" id="02P-Tl-uwa"/>
+                                    <constraint firstItem="dBM-dE-ynT" firstAttribute="top" secondItem="Jfs-Ap-0Tq" secondAttribute="bottom" constant="8" id="3id-7T-Jh7"/>
                                     <constraint firstItem="Jfs-Ap-0Tq" firstAttribute="centerX" secondItem="OEa-e4-H6r" secondAttribute="centerX" id="RN3-18-I85"/>
+                                    <constraint firstItem="dBM-dE-ynT" firstAttribute="centerX" secondItem="OEa-e4-H6r" secondAttribute="centerX" id="baa-6m-c5R"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -336,6 +341,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="dBM-dE-ynT" id="udq-uo-o0n"/>
                         <outlet property="message" destination="aGb-zA-cPH" id="NSm-fv-0wg"/>
                     </connections>
                 </viewController>
