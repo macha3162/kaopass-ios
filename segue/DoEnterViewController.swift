@@ -48,8 +48,7 @@ class DoEnterViewController: UIViewController, UITableViewDelegate, UITableViewD
         let rowData = tableData[sessionIds[indexPath.row]]
         cell.textLabel?.text = rowData["title"].string
         cell.detailTextLabel?.text = rowData["time"].string
-        cell.imageView?.image = UIImage(named: "session_\(indexPath.row).jpg")
-        print(cell)
+        cell.imageView?.image = UIImage(named: "session_\(rowData["number"]).jpg")
         return cell
     }
 

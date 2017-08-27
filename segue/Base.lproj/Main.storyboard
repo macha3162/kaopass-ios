@@ -120,7 +120,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SA8-Hs-iXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="33"/>
+            <point key="canvasLocation" x="1972" y="-34"/>
         </scene>
         <!--Signature View Controller-->
         <scene sceneID="I11-p3-Su9">
@@ -136,8 +136,23 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBc-wl-mcz">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="b54-4g-cuI"/>
+                                </constraints>
                                 <items>
-                                    <navigationItem title="名前(ひらがな)" id="GU1-tm-2gU"/>
+                                    <navigationItem title="名前(ひらがな)" id="GU1-tm-2gU">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="exH-v3-qT3">
+                                            <progressView key="customView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="h5u-Fp-Ykg">
+                                                <rect key="frame" x="854" y="21" width="150" height="2"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="ooE-ho-oQI"/>
+                                                    <constraint firstAttribute="width" constant="150" id="qDx-fU-Gd6"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="0.68828473339999996" green="0.84764621429999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </progressView>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQQ-PT-oXJ">
@@ -146,22 +161,25 @@
                             </webView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="yQQ-PT-oXJ" secondAttribute="trailing" id="BUF-ZE-JCj"/>
-                            <constraint firstItem="yQQ-PT-oXJ" firstAttribute="leading" secondItem="sWg-hr-3nu" secondAttribute="leading" id="Lvz-Rt-LDj"/>
-                            <constraint firstItem="VBc-wl-mcz" firstAttribute="top" secondItem="sWg-hr-3nu" secondAttribute="top" id="Mv8-Uz-Qfm"/>
-                            <constraint firstAttribute="trailing" secondItem="VBc-wl-mcz" secondAttribute="trailing" id="dVJ-3y-OCV"/>
-                            <constraint firstItem="yQQ-PT-oXJ" firstAttribute="top" secondItem="VBc-wl-mcz" secondAttribute="bottom" id="hxY-ss-1Xe"/>
-                            <constraint firstAttribute="bottom" secondItem="yQQ-PT-oXJ" secondAttribute="bottom" id="oS8-X1-bHw"/>
-                            <constraint firstItem="VBc-wl-mcz" firstAttribute="leading" secondItem="sWg-hr-3nu" secondAttribute="leading" id="p3m-Vq-g4e"/>
+                            <constraint firstItem="yQQ-PT-oXJ" firstAttribute="leading" secondItem="sWg-hr-3nu" secondAttribute="leading" id="7Sa-V4-lSx"/>
+                            <constraint firstItem="VBc-wl-mcz" firstAttribute="leading" secondItem="sWg-hr-3nu" secondAttribute="leading" id="BbY-Lk-gym"/>
+                            <constraint firstAttribute="bottom" secondItem="yQQ-PT-oXJ" secondAttribute="bottom" id="NKE-NB-jD9"/>
+                            <constraint firstItem="VBc-wl-mcz" firstAttribute="top" secondItem="sWg-hr-3nu" secondAttribute="top" id="XKa-AM-8Fv"/>
+                            <constraint firstAttribute="trailing" secondItem="yQQ-PT-oXJ" secondAttribute="trailing" id="Ynp-FG-cCc"/>
+                            <constraint firstAttribute="trailing" secondItem="VBc-wl-mcz" secondAttribute="trailing" id="dhP-Cd-TD9"/>
+                            <constraint firstItem="yQQ-PT-oXJ" firstAttribute="top" secondItem="VBc-wl-mcz" secondAttribute="bottom" id="tg1-CC-L3x"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="photoProgress" destination="h5u-Fp-Ykg" id="W0r-oZ-Yks"/>
                         <outlet property="webView" destination="yQQ-PT-oXJ" id="jbX-FG-iPk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPb-vX-70J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="-165"/>
+            <point key="canvasLocation" x="1033.59375" y="-165.625"/>
         </scene>
         <!--Checked In View Controller-->
         <scene sceneID="aJy-HW-B02">

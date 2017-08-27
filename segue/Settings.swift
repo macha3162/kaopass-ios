@@ -10,8 +10,8 @@ struct Settings {
     static var apiBaseUrl = "https://kaopass.herokuapp.com"
     //static var apiBaseUrl = "http://192.168.3.5:3000"
     
-    static let puloadImageSize = 0.4
-    static let searchImageSize = 0.3
+    static let puloadImageSize = 0.8
+    static let searchImageSize = 0.6
 }
 
 import UIKit

@@ -22,15 +22,14 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
     let CRLF = "\r\n"
     
     func setupDisplay(hidden: Bool){
-        //スクリーンの幅
-        let screenWidth = UIScreen.main.bounds.size.width/4;
-        //スクリーンの高さ
-        let screenHeight = UIScreen.main.bounds.size.height/4;
+        let imageWidth: CGFloat = 640.0/3.0
+        let imageHeight: CGFloat = 480.0/3.0
+        
         
         // プレビュー用のビューを生成
         imageView = UIImageView()
-        imageView.frame = CGRect(x: UIScreen.main.bounds.size.width - screenWidth, y: 0.0, width: screenWidth, height: screenHeight)
-        imageView.isHidden = true
+        imageView.frame = CGRect(x: UIScreen.main.bounds.size.width - imageWidth, y: UIScreen.main.bounds.size.height - imageHeight, width: imageWidth, height: imageHeight)
+        imageView.isHidden = hidden
     }
     
     func setupCamera(){
@@ -38,7 +37,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         session = AVCaptureSession()
         
         // sessionPreset: キャプチャ・クオリティの設定
-        session.sessionPreset = AVCaptureSessionPresetHigh
+        session.sessionPreset = AVCaptureSessionPreset640x480
         //        session.sessionPreset = AVCaptureSessionPresetPhoto
         //        session.sessionPreset = AVCaptureSessionPresetHigh
         //        session.sessionPreset = AVCaptureSessionPresetMedium
@@ -94,6 +93,28 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
             camera.unlockForConfiguration()
         } catch _ {
         }
+    }
+    
+    func faceCount() -> Int {
+        
+        // storyboardに置いたimageViewからCIImageを生成する
+        let ciImage = CIImage(cgImage: (self.imageView.image?.cgImage)!)
+        
+        // 顔認識なのでTypeをCIDetectorTypeFaceに指定する
+        let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyLow])
+        // 画像から特徴を抽出する
+        let features = detector?.features(in: ciImage)
+        
+        var resultString = "DETECTED FACES:\n\n"
+        
+        resultString.append("features: count\(String(describing: features?.count))\n" )
+        for feature in features as! [CIFaceFeature] {
+            resultString.append("bounds: \(NSStringFromCGRect(feature.bounds))\n")
+            resultString.append("\n")
+        }
+        print(resultString)
+        
+        return (features?.count)!
     }
     
     

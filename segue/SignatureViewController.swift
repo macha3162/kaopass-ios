@@ -13,13 +13,15 @@ import AVFoundation
 class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
     
     var userId = 0
-
+    
     var photoTimer = Timer()
     var photoCount = 0
-    let photoLimit = 5
-    let photoInterval = 5.0
+    let photoLimit = 3
+    let photoInterval = 2.0
     
+    @IBOutlet weak var photoProgress: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
+    
     
     func webViewDidStartLoad(_ webView: UIWebView) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -59,42 +61,46 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
     
     
     func takeStillPicture(){
-        if var _:AVCaptureConnection? = output.connection(withMediaType: AVMediaTypeVideo){
-            if (photoLimit >= photoCount){
-                // アルバムに追加
-                // UIImageWriteToSavedPhotosAlbum(self.imageView.image!, self, nil, nil)
-                
-                // Post
-                // 画像アップロード先URL
-                let uploadUrl = URL(string: "\(Settings.apiBaseUrl)/api/users/\(self.userId)/photos")!
-                
-                // params生成
-                // access_token: Step.1で取得しているもの
-                let params: [String: String] = ["access_token": "dummy"]
-                
-                // imageData生成
-                let size = CGFloat(Settings.puloadImageSize)
-                let resizedImage = self.imageView.image?.convert(toSize:CGSize(width: ((self.imageView.image?.size.width)! * size), height:((self.imageView.image?.size.height)! * size)), scale: 1.0)
-                let imageData = UIImageJPEGRepresentation((resizedImage?.updateImageOrientionUpSide())! , 0.2)!
-                
-                // boudary生成
-                let boundary = generateBoundaryString()
-                var request = URLRequest(url: uploadUrl)
-                request.httpMethod = "POST"
-                request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-                request.httpBody = createBodyWith(parameters: params, filePathKey: "photo[image]", imageData: imageData, boundary: boundary) as Data
-                
-                // 画像アップロードPOST
-                urlSession.dataTask(with: request).resume()
-                photoCount += 1
+        
+        if var _:AVCaptureConnection? = output.connection(withMediaType: AVMediaTypeVideo){            
+            if (photoLimit > photoCount){
+                if faceCount() > 0 {
+                    // アルバムに追加
+                    // UIImageWriteToSavedPhotosAlbum(self.imageView.image!, self, nil, nil)
+                    
+                    // Post
+                    // 画像アップロード先URL
+                    let uploadUrl = URL(string: "\(Settings.apiBaseUrl)/api/users/\(self.userId)/photos")!
+                    
+                    // params生成
+                    let params: [String: String] = ["access_token": "dummy"]
+                    
+                    // imageData生成
+                    let size = CGFloat(Settings.puloadImageSize)
+                    let resizedImage = self.imageView.image?.convert(toSize:CGSize(width: ((self.imageView.image?.size.width)! * size), height:((self.imageView.image?.size.height)! * size)), scale: 1.0)
+                    let imageData = UIImageJPEGRepresentation((resizedImage?.updateImageOrientionUpSide())! , 0.4)!
+                    
+                    // boudary生成
+                    let boundary = generateBoundaryString()
+                    var request = URLRequest(url: uploadUrl)
+                    request.httpMethod = "POST"
+                    request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+                    request.httpBody = createBodyWith(parameters: params, filePathKey: "photo[image]", imageData: imageData, boundary: boundary) as Data
+                    
+                    // 画像アップロードPOST
+                    urlSession.dataTask(with: request).resume()
+                    photoCount += 1
+                    
+                    
+                }
             }
+            photoProgress.setProgress(Float(photoCount)/Float(photoLimit), animated: true)
         }
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidDisappear(_ animated: Bool) {
