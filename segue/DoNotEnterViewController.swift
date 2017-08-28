@@ -9,13 +9,13 @@
 import UIKit
 
 class DoNotEnterViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
 }

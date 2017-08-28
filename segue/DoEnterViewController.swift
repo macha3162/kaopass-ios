@@ -14,7 +14,7 @@ class DoEnterViewController: UIViewController, UITableViewDelegate, UITableViewD
     var name: String = ""
     var sessionIds: [Int] = []
     var tableData: JSON = []
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var message: UILabel!
     
@@ -32,9 +32,10 @@ class DoEnterViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidAppear(_ animated: Bool) {
         message.text = "\(self.name)様の登録済みセッション"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
     }
     
     

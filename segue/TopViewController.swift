@@ -11,12 +11,12 @@ import Alamofire
 import SwiftyJSON
 
 class TopViewController: UIViewController {
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -32,19 +32,20 @@ class TopViewController: UIViewController {
                 response in
                 if response.result.isSuccess {
                     let json = JSON(response.result.value!)
-                     nextView.userId = json["id"].int!
+                    nextView.userId = json["id"].int!
                 }
                 keepAlive = false
             }
             while keepAlive &&
-                runLoop.run(mode: RunLoopMode.defaultRunLoopMode, before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
-                    // 0.1秒毎の処理なので、処理が止まらない
+                runLoop.run(mode: RunLoopMode.defaultRunLoopMode,
+                            before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
+                                
             }
             
         }
     }
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {
-    
+        
     }
 }

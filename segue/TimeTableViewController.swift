@@ -27,7 +27,7 @@ class TimeTableViewController: UITableViewController {
                 if response.result.isSuccess {}
             }
             
-            self.present(self.storyboard!.instantiateViewController(withIdentifier: "thank_you"), animated: true)            
+            self.present(self.storyboard!.instantiateViewController(withIdentifier: "thank_you"), animated: true)
         }
     }
     
@@ -42,7 +42,7 @@ class TimeTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem?.isEnabled = false
         self.tableView.allowsMultipleSelection = true
         
-   }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
