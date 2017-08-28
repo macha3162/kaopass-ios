@@ -15,6 +15,7 @@ class SearchViewController: ImageViewBaseController {
     
     let synthesizer = AVSpeechSynthesizer()
     let runLoop = RunLoop.current
+    var faceCheckTimer = Timer()
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var message: UILabel!
@@ -25,7 +26,6 @@ class SearchViewController: ImageViewBaseController {
         if faceCount() > 0 {
             let result = searchFace()
             print(result.statusCode)
-            print(result.json)
             switch result.statusCode {
             case 200:
                 let nextView = self.storyboard!.instantiateViewController(withIdentifier: "do_enter") as! DoEnterViewController
@@ -55,7 +55,6 @@ class SearchViewController: ImageViewBaseController {
         var resultJson = JSON([""])
         
         
-        
         if var _:AVCaptureConnection? = output.connection(withMediaType: AVMediaTypeVideo){
             
             // アルバムに追加
@@ -63,7 +62,8 @@ class SearchViewController: ImageViewBaseController {
             
             // imageData生成
             let size = CGFloat(Settings.searchImageSize)
-            let resizedImage = self.imageView.image?.convert(toSize:CGSize(width: ((self.imageView.image?.size.width)! * size), height:((self.imageView.image?.size.height)! * size)), scale: 1.0)
+            let resizedImage = self.imageView.image?.convert(toSize:CGSize(width: ((self.imageView.image?.size.width)! * size),
+                                                                           height: ((self.imageView.image?.size.height)! * size)), scale: 1.0)
             let imageData = UIImageJPEGRepresentation((resizedImage?.updateImageOrientionUpSide())! , 0.4)!
             
             var keepAlive = true
@@ -100,11 +100,8 @@ class SearchViewController: ImageViewBaseController {
             while keepAlive &&
                 runLoop.run(mode: RunLoopMode.defaultRunLoopMode, before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
             }
-            
         }
         return (statusCode, resultJson)
-        
-        
     }
     
     func readText(string: String) {
@@ -124,31 +121,39 @@ class SearchViewController: ImageViewBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // setupDisplay(hidden: false)
         let screenWidth = UIScreen.main.bounds.size.width/4;
         let screenHeight = UIScreen.main.bounds.size.height/4;
         let imageWidth: CGFloat = 480.0/3.0
         let imageHeight: CGFloat = 640.0/3.0
         
         // プレビュー用のビューを生成
-        print("------------------")
         imageView = UIImageView()
         imageView.frame = CGRect(x: screenWidth * 3 - (imageHeight/2), y: (screenHeight * 2) - (imageWidth/2) - 50, width: imageHeight, height: imageWidth)
-        
+        imageView.layer.borderWidth = 1
+        faceCheckTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.faceCheck), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         setupCamera()
         indicator.isHidden = true
+        faceCheck()
+    }
+    
+    func faceCheck(){
+        if(faceCount() > 0){
+            imageView.layer.borderColor = UIColor.green.cgColor
+        } else{
+            imageView.layer.borderColor = UIColor.red.cgColor
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         clearData()
+        faceCheckTimer.invalidate()
     }
 }

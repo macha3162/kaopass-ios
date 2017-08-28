@@ -13,7 +13,6 @@ import AVFoundation
 class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
     
     var userId = 0
-    
     var photoTimer = Timer()
     var photoCount = 0
     let photoLimit = 3
@@ -90,13 +89,10 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
                     // 画像アップロードPOST
                     urlSession.dataTask(with: request).resume()
                     photoCount += 1
-                    
-                    
                 }
             }
             photoProgress.setProgress(Float(photoCount)/Float(photoLimit), animated: true)
         }
-        
     }
     
     override func didReceiveMemoryWarning() {

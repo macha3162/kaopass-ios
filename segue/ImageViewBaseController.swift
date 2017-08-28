@@ -96,25 +96,25 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
     }
     
     func faceCount() -> Int {
-        
-        // storyboardに置いたimageViewからCIImageを生成する
-        let ciImage = CIImage(cgImage: (self.imageView.image?.cgImage)!)
-        
-        // 顔認識なのでTypeをCIDetectorTypeFaceに指定する
-        let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyLow])
-        // 画像から特徴を抽出する
-        let features = detector?.features(in: ciImage)
-        
-        var resultString = "DETECTED FACES:\n\n"
-        
-        resultString.append("features: count\(String(describing: features?.count))\n" )
-        for feature in features as! [CIFaceFeature] {
-            resultString.append("bounds: \(NSStringFromCGRect(feature.bounds))\n")
-            resultString.append("\n")
+        if let cgImage = self.imageView.image?.cgImage {
+            let ciImage = CIImage(cgImage: cgImage)
+            
+            // 顔認識なのでTypeをCIDetectorTypeFaceに指定する
+            let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+            let features = detector?.features(in: ciImage)
+            
+            var resultString = ""
+            resultString.append("features: count\(String(describing: features?.count))\n" )
+            for feature in features as! [CIFaceFeature] {
+                resultString.append("bounds: \(NSStringFromCGRect(feature.bounds))\n")
+                resultString.append("\n")
+            }
+            print(resultString)
+            
+            return (features?.count)!
+        }else{
+            return 0
         }
-        print(resultString)
-        
-        return (features?.count)!
     }
     
     
@@ -128,7 +128,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         DispatchQueue.main.async {
             self.imageView.image = image
             // 画像を反転
-
+            
             //self.imageView.transform = CGAffineTransform(scaleX: -1, y: 1)
             
             // UIImageViewをビューに追加
