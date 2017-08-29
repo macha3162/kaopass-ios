@@ -32,8 +32,8 @@ class SearchViewController: ImageViewBaseController {
                 nextView.name = result.json["name"].stringValue
                 nextView.sessionIds = result.json["session_ids"].arrayObject as! [Int]
                 self.present(nextView, animated: true, completion: nil)
-                self.readText(string: "\(result.json["name"].stringValue)さまは登録済みです。")
-                self.readText(string: "\(result.json["visit_count"])回目の来場です")
+                self.readText(string: "\(result.json["name"].stringValue)さまは、登録済みです。")
+                self.readText(string: "\(result.json["visit_count"])回目の来場です。")
                 
             case 204:
                 let nextView = self.storyboard!.instantiateViewController(withIdentifier: "do_not_enter") as! DoNotEnterViewController
