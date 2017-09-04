@@ -12,7 +12,6 @@
 		8540018D1F451D550036FD04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8540018C1F451D550036FD04 /* Settings.swift */; };
 		854001911F4561A30036FD04 /* ImageViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001901F4561A30036FD04 /* ImageViewBaseController.swift */; };
 		854001931F4BF4FF0036FD04 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001921F4BF4FF0036FD04 /* TimeTableViewController.swift */; };
-		8540019C1F4C4AC50036FD04 /* sessions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8540019B1F4C4AC50036FD04 /* sessions.json */; };
 		854001C41F4E728C0036FD04 /* DoNotEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001C31F4E728C0036FD04 /* DoNotEnterViewController.swift */; };
 		854001C61F4E72C90036FD04 /* DoEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001C51F4E72C90036FD04 /* DoEnterViewController.swift */; };
 		85F542AE1F3971C4005AE3E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */; };
@@ -32,7 +31,6 @@
 		8540018C1F451D550036FD04 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		854001901F4561A30036FD04 /* ImageViewBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewBaseController.swift; sourceTree = "<group>"; };
 		854001921F4BF4FF0036FD04 /* TimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
-		8540019B1F4C4AC50036FD04 /* sessions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessions.json; sourceTree = "<group>"; };
 		854001C31F4E728C0036FD04 /* DoNotEnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoNotEnterViewController.swift; sourceTree = "<group>"; };
 		854001C51F4E72C90036FD04 /* DoEnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoEnterViewController.swift; sourceTree = "<group>"; };
 		85F542AA1F3971C4005AE3E9 /* KaoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +84,7 @@
 		85F542A11F3971C4005AE3E9 = {
 			isa = PBXGroup;
 			children = (
-				85F542AC1F3971C4005AE3E9 /* segue */,
+				85F542AC1F3971C4005AE3E9 /* KaoPass */,
 				85F542AB1F3971C4005AE3E9 /* Products */,
 				05BCF79482BA1790C23D577A /* Pods */,
 				3E02831C790A254D9636E2DC /* Frameworks */,
@@ -101,7 +99,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85F542AC1F3971C4005AE3E9 /* segue */ = {
+		85F542AC1F3971C4005AE3E9 /* KaoPass */ = {
 			isa = PBXGroup;
 			children = (
 				85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */,
@@ -118,8 +116,8 @@
 				85F542B41F3971C4005AE3E9 /* Assets.xcassets */,
 				85F542B61F3971C4005AE3E9 /* LaunchScreen.storyboard */,
 				85F542B91F3971C4005AE3E9 /* Info.plist */,
-				8540019B1F4C4AC50036FD04 /* sessions.json */,
 			);
+			name = KaoPass;
 			path = segue;
 			sourceTree = "<group>";
 		};
@@ -188,7 +186,6 @@
 			files = (
 				85F542B81F3971C4005AE3E9 /* LaunchScreen.storyboard in Resources */,
 				85F542B51F3971C4005AE3E9 /* Assets.xcassets in Resources */,
-				8540019C1F4C4AC50036FD04 /* sessions.json in Resources */,
 				85F542B31F3971C4005AE3E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
