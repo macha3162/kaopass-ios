@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  segue
+//  TopViewController.swift
+//  KaoPass
 //
 //  Created by masuda.shigeki on 2017/08/08.
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.

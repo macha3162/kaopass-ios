@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_segueVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_segueVersionString[];
+FOUNDATION_EXPORT double Pods_KaoPassVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_KaoPassVersionString[];
 

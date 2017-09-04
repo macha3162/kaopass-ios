@@ -1,6 +1,6 @@
 //
 //  TimeTableViewController.swift
-//  segue
+//  KaoPass
 //
 //  Created by masuda.shigeki on 2017/08/22.
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.

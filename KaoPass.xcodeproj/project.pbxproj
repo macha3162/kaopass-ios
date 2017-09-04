@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C5C0D65BBA4A0F016B5AAEA /* Pods_segue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61ED1A56EB8C92FD3098E311 /* Pods_segue.framework */; };
+		6084491E84C8618564C408CA /* Pods_KaoPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC935CAAA22CCAEBE95F576 /* Pods_KaoPass.framework */; };
 		8532F6061F4FB3CA00E74F17 /* not_enter.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8532F6051F4FB3CA00E74F17 /* not_enter.gif */; };
 		8532F60C1F4FC1BC00E74F17 /* ecumerun_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F60B1F4FC1BC00E74F17 /* ecumerun_button.png */; };
 		8532F60E1F4FC22700E74F17 /* ecumerun_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F60D1F4FC22700E74F17 /* ecumerun_button2.png */; };
@@ -46,8 +46,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B9ED8D75895119D50E84630 /* Pods-segue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-segue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-segue/Pods-segue.debug.xcconfig"; sourceTree = "<group>"; };
-		61ED1A56EB8C92FD3098E311 /* Pods_segue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_segue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8532F6051F4FB3CA00E74F17 /* not_enter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = not_enter.gif; sourceTree = "<group>"; };
 		8532F60B1F4FC1BC00E74F17 /* ecumerun_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecumerun_button.png; sourceTree = "<group>"; };
 		8532F60D1F4FC22700E74F17 /* ecumerun_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecumerun_button2.png; sourceTree = "<group>"; };
@@ -77,7 +75,7 @@
 		854001BB1F4D25E90036FD04 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		854001C31F4E728C0036FD04 /* DoNotEnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoNotEnterViewController.swift; sourceTree = "<group>"; };
 		854001C51F4E72C90036FD04 /* DoEnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoEnterViewController.swift; sourceTree = "<group>"; };
-		85F542AA1F3971C4005AE3E9 /* segue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = segue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F542AA1F3971C4005AE3E9 /* KaoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F542AF1F3971C4005AE3E9 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		85F542B21F3971C4005AE3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,7 +85,9 @@
 		85F542BF1F397401005AE3E9 /* SignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 		85F542C11F397454005AE3E9 /* CheckedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckedInViewController.swift; sourceTree = "<group>"; };
 		85F542C51F397F45005AE3E9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		DD4592FB8514C9DC8E06621A /* Pods-segue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-segue.release.xcconfig"; path = "Pods/Target Support Files/Pods-segue/Pods-segue.release.xcconfig"; sourceTree = "<group>"; };
+		ADC1C68386CA761205E39309 /* Pods-KaoPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaoPass.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaoPass/Pods-KaoPass.release.xcconfig"; sourceTree = "<group>"; };
+		AF7005FC2B48FFBB5B7BA45C /* Pods-KaoPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaoPass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KaoPass/Pods-KaoPass.debug.xcconfig"; sourceTree = "<group>"; };
+		CEC935CAAA22CCAEBE95F576 /* Pods_KaoPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaoPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				854001851F41874D0036FD04 /* CoreImage.framework in Frameworks */,
-				4C5C0D65BBA4A0F016B5AAEA /* Pods_segue.framework in Frameworks */,
+				6084491E84C8618564C408CA /* Pods_KaoPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +106,8 @@
 		05BCF79482BA1790C23D577A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5B9ED8D75895119D50E84630 /* Pods-segue.debug.xcconfig */,
-				DD4592FB8514C9DC8E06621A /* Pods-segue.release.xcconfig */,
+				AF7005FC2B48FFBB5B7BA45C /* Pods-KaoPass.debug.xcconfig */,
+				ADC1C68386CA761205E39309 /* Pods-KaoPass.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 				8540018A1F440B750036FD04 /* CoreBluetooth.framework */,
 				854001881F44018B0036FD04 /* BluetoothKit.framework */,
 				854001841F41874D0036FD04 /* CoreImage.framework */,
-				61ED1A56EB8C92FD3098E311 /* Pods_segue.framework */,
+				CEC935CAAA22CCAEBE95F576 /* Pods_KaoPass.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 		85F542AB1F3971C4005AE3E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85F542AA1F3971C4005AE3E9 /* segue.app */,
+				85F542AA1F3971C4005AE3E9 /* KaoPass.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85F542A91F3971C4005AE3E9 /* segue */ = {
+		85F542A91F3971C4005AE3E9 /* KaoPass */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85F542BC1F3971C4005AE3E9 /* Build configuration list for PBXNativeTarget "segue" */;
+			buildConfigurationList = 85F542BC1F3971C4005AE3E9 /* Build configuration list for PBXNativeTarget "KaoPass" */;
 			buildPhases = (
 				63A22AC66BC0FE8D16A8C755 /* [CP] Check Pods Manifest.lock */,
 				85F542A61F3971C4005AE3E9 /* Sources */,
@@ -209,9 +209,9 @@
 			);
 			dependencies = (
 			);
-			name = segue;
+			name = KaoPass;
 			productName = segue;
-			productReference = 85F542AA1F3971C4005AE3E9 /* segue.app */;
+			productReference = 85F542AA1F3971C4005AE3E9 /* KaoPass.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 85F542A51F3971C4005AE3E9 /* Build configuration list for PBXProject "segue" */;
+			buildConfigurationList = 85F542A51F3971C4005AE3E9 /* Build configuration list for PBXProject "KaoPass" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -244,7 +244,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85F542A91F3971C4005AE3E9 /* segue */,
+				85F542A91F3971C4005AE3E9 /* KaoPass */,
 			);
 		};
 /* End PBXProject section */
@@ -295,7 +295,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-segue-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-KaoPass-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -308,7 +308,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-segue/Pods-segue-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-KaoPass/Pods-KaoPass-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -319,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-segue/Pods-segue-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KaoPass/Pods-KaoPass-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F975758A817B0FB5372A414B /* [CP] Copy Pods Resources */ = {
@@ -334,7 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-segue/Pods-segue-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KaoPass/Pods-KaoPass-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -476,7 +476,7 @@
 		};
 		85F542BD1F3971C4005AE3E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B9ED8D75895119D50E84630 /* Pods-segue.debug.xcconfig */;
+			baseConfigurationReference = AF7005FC2B48FFBB5B7BA45C /* Pods-KaoPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L539A84Y3H;
@@ -491,7 +491,7 @@
 		};
 		85F542BE1F3971C4005AE3E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD4592FB8514C9DC8E06621A /* Pods-segue.release.xcconfig */;
+			baseConfigurationReference = ADC1C68386CA761205E39309 /* Pods-KaoPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L539A84Y3H;
@@ -507,7 +507,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85F542A51F3971C4005AE3E9 /* Build configuration list for PBXProject "segue" */ = {
+		85F542A51F3971C4005AE3E9 /* Build configuration list for PBXProject "KaoPass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85F542BA1F3971C4005AE3E9 /* Debug */,
@@ -516,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85F542BC1F3971C4005AE3E9 /* Build configuration list for PBXNativeTarget "segue" */ = {
+		85F542BC1F3971C4005AE3E9 /* Build configuration list for PBXNativeTarget "KaoPass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85F542BD1F3971C4005AE3E9 /* Debug */,

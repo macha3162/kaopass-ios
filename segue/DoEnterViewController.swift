@@ -1,6 +1,6 @@
 //
 //  DoEnterViewController.swift
-//  segue
+//  KaoPass
 //
 //  Created by masuda.shigeki on 2017/08/24.
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.

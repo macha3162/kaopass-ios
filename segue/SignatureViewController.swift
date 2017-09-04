@@ -1,6 +1,6 @@
 //
-//  NextViewController.swift
-//  segue
+//  SignatureViewController.swift
+//  KaoPass
 //
 //  Created by masuda.shigeki on 2017/08/08.
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.
@@ -15,8 +15,8 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
     var userId = 0
     var photoTimer = Timer()
     var photoCount = 0
-    let photoLimit = 3
-    let photoInterval = 2.0
+    let photoLimit = 5
+    let photoInterval = 3.0
     
     @IBOutlet weak var photoProgress: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
@@ -63,7 +63,7 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
         
         if var _:AVCaptureConnection? = output.connection(withMediaType: AVMediaTypeVideo){            
             if (photoLimit > photoCount){
-                if faceCount() > 0 {
+                if true {
                     // アルバムに追加
                     // UIImageWriteToSavedPhotosAlbum(self.imageView.image!, self, nil, nil)
                     

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/masuda.shigeki/Documents/MyApps/segue/KaoPass.xcodeproj">
+      location = "group:KaoPass.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

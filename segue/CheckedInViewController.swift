@@ -1,6 +1,6 @@
 //
-//  FinalViewController.swift
-//  segue
+//  CheckedInViewController.swift
+//  KaoPass
 //
 //  Created by masuda.shigeki on 2017/08/08.
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.
@@ -35,9 +35,9 @@ class CheckedInViewController: UIViewController {
                 }
                 keepAlive = false
             }
+            // 次の画面でIDが必要となるため通信結果を待つ.
             while keepAlive &&
                 runLoop.run(mode: RunLoopMode.defaultRunLoopMode, before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
-                    // 0.1秒毎の処理なので、処理が止まらない
             }
             
         }

@@ -1,14 +1,13 @@
 //
 //  Settings.swift
-//  segue
+//  KaoPass
 //
 //  Created by masuda.shigeki on 2017/08/17.
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.
 //
 
 struct Settings {
-    static var apiBaseUrl = "https://kaopass.herokuapp.com"
-    //static var apiBaseUrl = "http://192.168.3.5:3000"
+    static let apiBaseUrl = "http://192.168.3.5:3000"
     
     static let puloadImageSize = 0.8
     static let searchImageSize = 0.6

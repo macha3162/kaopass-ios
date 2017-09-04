@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "85F542A91F3971C4005AE3E9"
-               BuildableName = "segue.app"
-               BlueprintName = "segue"
-               ReferencedContainer = "container:segue.xcodeproj">
+               BuildableName = "KaoPass.app"
+               BlueprintName = "KaoPass"
+               ReferencedContainer = "container:KaoPass.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,16 +33,16 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "85F542A91F3971C4005AE3E9"
-            BuildableName = "segue.app"
-            BlueprintName = "segue"
-            ReferencedContainer = "container:segue.xcodeproj">
+            BuildableName = "KaoPass.app"
+            BlueprintName = "KaoPass"
+            ReferencedContainer = "container:KaoPass.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "85F542A91F3971C4005AE3E9"
-            BuildableName = "segue.app"
-            BlueprintName = "segue"
-            ReferencedContainer = "container:segue.xcodeproj">
+            BuildableName = "KaoPass.app"
+            BlueprintName = "KaoPass"
+            ReferencedContainer = "container:KaoPass.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "85F542A91F3971C4005AE3E9"
-            BuildableName = "segue.app"
-            BlueprintName = "segue"
-            ReferencedContainer = "container:segue.xcodeproj">
+            BuildableName = "KaoPass.app"
+            BlueprintName = "KaoPass"
+            ReferencedContainer = "container:KaoPass.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

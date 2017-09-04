@@ -1,6 +1,6 @@
 //
 //  ImageViewBaseController.swift
-//  segue
+//  KaoPass
 //
 //  Created by masuda.shigeki on 2017/08/17.
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.
@@ -32,8 +32,8 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         imageView.isHidden = hidden
     }
     
+    // カメラをセットアップする
     func setupCamera(){
-        // AVCaptureSession: キャプチャに関する入力と出力の管理
         session = AVCaptureSession()
         
         // sessionPreset: キャプチャ・クオリティの設定
@@ -43,12 +43,10 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         //        session.sessionPreset = AVCaptureSessionPresetMedium
         //        session.sessionPreset = AVCaptureSessionPresetLow
         
-        
-        
-        // 背面・前面カメラの選択 iOS10での変更
+        // 背面・前面カメラの選択
         camera = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera,
                                                mediaType: AVMediaTypeVideo,
-                                               position: .front) // position: .front
+                                               position: .front)
         
         
         // カメラからの入力データ
@@ -59,42 +57,31 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         }
         
         
-        // 入力をセッションに追加
         if(session.canAddInput(input)) {
             session.addInput(input)
         }
         
         output = AVCaptureVideoDataOutput()
-        // 出力をセッションに追加
         if(session.canAddOutput(output)) {
             session.addOutput(output)
         }
         
-        // ピクセルフォーマットを 32bit BGR + A とする
         output?.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable : Int(kCVPixelFormatType_32BGRA)]
-        
-        // フレームをキャプチャするためのサブスレッド用のシリアルキューを用意
         output?.setSampleBufferDelegate(self, queue: DispatchQueue.main)
         // キューのブロック中に新しいフレームが来たら削除する
         output?.alwaysDiscardsLateVideoFrames = true
-        
-        // ビデオ出力に接続
-        // let connection  = output.connection(withMediaType: AVMediaTypeVideo)
-        
         session.startRunning()
         
         // deviceをロックして設定
-        // swift 2.0
         do {
             try camera.lockForConfiguration()
-            // フレームレート
             camera.activeVideoMinFrameDuration = CMTimeMake(1, 10)
-            
             camera.unlockForConfiguration()
         } catch _ {
         }
     }
     
+    // 画像の中にふくまれる顔の数を返す.
     func faceCount() -> Int {
         if let cgImage = self.imageView.image?.cgImage {
             let ciImage = CIImage(cgImage: cgImage)
@@ -120,17 +107,11 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
     
     // 新しいキャプチャの追加で呼ばれる
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        
-        // キャプチャしたsampleBufferからUIImageを作成
         let image:UIImage = self.captureImage(sampleBuffer)
         
         // 画像を画面に表示
         DispatchQueue.main.async {
             self.imageView.image = image
-            // 画像を反転
-            
-            //self.imageView.transform = CGAffineTransform(scaleX: -1, y: 1)
-            
             // UIImageViewをビューに追加
             self.view.addSubview(self.imageView)
         }
@@ -138,11 +119,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
     
     // sampleBufferからUIImageを作成
     func captureImage(_ sampleBuffer:CMSampleBuffer) -> UIImage{
-        
-        // Sampling Bufferから画像を取得
         let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-        
-        // pixel buffer のベースアドレスをロック
         CVPixelBufferLockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
         
         let baseAddress:UnsafeMutableRawPointer = CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 0)!
@@ -150,13 +127,7 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         let bytesPerRow:Int = CVPixelBufferGetBytesPerRow(imageBuffer)
         let width:Int = CVPixelBufferGetWidth(imageBuffer)
         let height:Int = CVPixelBufferGetHeight(imageBuffer)
-        
-        
-        // 色空間
         let colorSpace:CGColorSpace = CGColorSpaceCreateDeviceRGB()
-        
-        //let bitsPerCompornent:Int = 8
-        // swift 2.0
         let newContext:CGContext = CGContext(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace,  bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue|CGBitmapInfo.byteOrder32Little.rawValue)!
         
         let imageRef:CGImage = newContext.makeImage()!
@@ -195,14 +166,11 @@ class ImageViewBaseController: UIViewController, AVCaptureVideoDataOutputSampleB
         return "Boundary-\(NSUUID().uuidString)"
     }
     
+    // 画像をアスペクト比を保ちつつリサイズする
     func resizeUIImageByWidth(image: UIImage, width: Double) -> UIImage {
-        // オリジナル画像のサイズから、アスペクト比を計算
         let aspectRate = image.size.height / image.size.width
-        // リサイズ後のWidthをアスペクト比を元に、リサイズ後のサイズを取得
         let resizedSize = CGSize(width: width, height: width * Double(aspectRate))
-        // リサイズ後のUIImageを生成して返却
         UIGraphicsBeginImageContext(resizedSize)
-        //image.draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
         image.draw(in: CGRect(x: 0, y: 0, width: resizedSize.height, height: resizedSize.width))
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

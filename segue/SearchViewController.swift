@@ -1,6 +1,6 @@
 //
 //  SearchViewController.swift
-//  segue
+//  KaoPass
 //
 //  Created by masuda.shigeki on 2017/08/08.
 //  Copyright © 2017年 masuda.shigeki. All rights reserved.
@@ -104,10 +104,11 @@ class SearchViewController: ImageViewBaseController {
         return (statusCode, resultJson)
     }
     
+    // 引数の文字列を日本語音声で読み上げる.
     func readText(string: String) {
+        // 読み上げが空振りしないように待つ.
         while synthesizer.isSpeaking &&
             runLoop.run(mode: RunLoopMode.defaultRunLoopMode, before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
-                // 0.1秒毎の処理なので、処理が止まらない
                 print("waiting.")
         }
         print(string)
