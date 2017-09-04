@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
 
 class DoEnterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,14 +17,20 @@ class DoEnterViewController: UIViewController, UITableViewDelegate, UITableViewD
     var tableData: JSON = []
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sessonTable: UITableView!
     @IBOutlet weak var message: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let path = Bundle.main.path(forResource: "sessions", ofType: "json")
-        let jsonStr = try? String(contentsOfFile: path!)
-        tableData = JSON.parse(jsonStr!)
+        Alamofire.request("\(Settings.apiBaseUrl)/api/sessions", method: .get).responseJSON {
+            response in
+            if response.result.isSuccess {
+                self.tableData = JSON(response.result.value!)
+                self.sessonTable.reloadData()
+                
+            }
+        }
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -48,7 +55,7 @@ class DoEnterViewController: UIViewController, UITableViewDelegate, UITableViewD
         let rowData = tableData[sessionIds[indexPath.row]]
         cell.textLabel?.text = rowData["title"].string
         cell.detailTextLabel?.text = rowData["time"].string
-        cell.imageView?.image = UIImage(named: "session_\(rowData["number"]).jpg")
+        cell.imageView?.image = UIImage(named: "session_dummy")
         return cell
     }
 }

@@ -17,6 +17,7 @@ class TimeTableViewController: UITableViewController {
     var tableData: JSON = []
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet var sessonTable: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "finish_registration"){
@@ -35,9 +36,14 @@ class TimeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = Bundle.main.path(forResource: "sessions", ofType: "json")
-        let jsonStr = try? String(contentsOfFile: path!)
-        tableData = JSON.parse(jsonStr!)
+        Alamofire.request("\(Settings.apiBaseUrl)/api/sessions", method: .get).responseJSON {
+            response in
+            if response.result.isSuccess {
+                self.tableData = JSON(response.result.value!)
+                self.sessonTable.reloadData()
+
+            }
+        }
         
         self.navigationItem.rightBarButtonItem?.isEnabled = false
         self.tableView.allowsMultipleSelection = true
@@ -61,7 +67,7 @@ class TimeTableViewController: UITableViewController {
         let rowData = tableData[indexPath.row]
         cell.textLabel?.text = rowData["title"].string
         cell.detailTextLabel?.text = rowData["time"].string
-        cell.imageView?.image = UIImage(named: "session_\(rowData["number"]).jpg")
+        cell.imageView?.image = UIImage(named: "session_dummy.jpg")
         
         return cell
     }

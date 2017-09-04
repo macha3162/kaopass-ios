@@ -15,8 +15,8 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
     var userId = 0
     var photoTimer = Timer()
     var photoCount = 0
-    let photoLimit = 5
-    let photoInterval = 3.0
+    let photoLimit = 3 // 撮影枚数
+    let photoInterval = 3.0 // 撮影間隔
     
     @IBOutlet weak var photoProgress: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
@@ -58,7 +58,7 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
         setupCamera()
     }
     
-    
+    // 写真を撮影しサーバへポストする
     func takeStillPicture(){
         
         if var _:AVCaptureConnection? = output.connection(withMediaType: AVMediaTypeVideo){            
@@ -67,19 +67,13 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
                     // アルバムに追加
                     // UIImageWriteToSavedPhotosAlbum(self.imageView.image!, self, nil, nil)
                     
-                    // Post
-                    // 画像アップロード先URL
                     let uploadUrl = URL(string: "\(Settings.apiBaseUrl)/api/users/\(self.userId)/photos")!
-                    
-                    // params生成
                     let params: [String: String] = ["access_token": "dummy"]
                     
-                    // imageData生成
                     let size = CGFloat(Settings.puloadImageSize)
                     let resizedImage = self.imageView.image?.convert(toSize:CGSize(width: ((self.imageView.image?.size.width)! * size), height:((self.imageView.image?.size.height)! * size)), scale: 1.0)
                     let imageData = UIImageJPEGRepresentation((resizedImage?.updateImageOrientionUpSide())! , 0.4)!
                     
-                    // boudary生成
                     let boundary = generateBoundaryString()
                     var request = URLRequest(url: uploadUrl)
                     request.httpMethod = "POST"

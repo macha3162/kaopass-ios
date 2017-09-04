@@ -8,31 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6084491E84C8618564C408CA /* Pods_KaoPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC935CAAA22CCAEBE95F576 /* Pods_KaoPass.framework */; };
-		8532F6061F4FB3CA00E74F17 /* not_enter.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8532F6051F4FB3CA00E74F17 /* not_enter.gif */; };
-		8532F60C1F4FC1BC00E74F17 /* ecumerun_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F60B1F4FC1BC00E74F17 /* ecumerun_button.png */; };
-		8532F60E1F4FC22700E74F17 /* ecumerun_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F60D1F4FC22700E74F17 /* ecumerun_button2.png */; };
-		8532F6101F4FC2E000E74F17 /* hash_bs17.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F60F1F4FC2DF00E74F17 /* hash_bs17.png */; };
-		8532F6141F4FC9C300E74F17 /* kaopass_wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F6131F4FC9C300E74F17 /* kaopass_wall.png */; };
-		8532F6161F4FE4A800E74F17 /* backgraund.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532F6151F4FE4A800E74F17 /* backgraund.png */; };
 		854001851F41874D0036FD04 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854001841F41874D0036FD04 /* CoreImage.framework */; };
 		8540018D1F451D550036FD04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8540018C1F451D550036FD04 /* Settings.swift */; };
 		854001911F4561A30036FD04 /* ImageViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001901F4561A30036FD04 /* ImageViewBaseController.swift */; };
 		854001931F4BF4FF0036FD04 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001921F4BF4FF0036FD04 /* TimeTableViewController.swift */; };
-		854001961F4BF8530036FD04 /* session_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001951F4BF8530036FD04 /* session_0.jpg */; };
 		8540019C1F4C4AC50036FD04 /* sessions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8540019B1F4C4AC50036FD04 /* sessions.json */; };
-		8540019E1F4C519F0036FD04 /* session_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8540019D1F4C519F0036FD04 /* session_1.jpg */; };
-		854001A01F4C51E90036FD04 /* session_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8540019F1F4C51E90036FD04 /* session_2.jpg */; };
-		854001A21F4C52160036FD04 /* session_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001A11F4C52160036FD04 /* session_3.jpg */; };
-		854001A41F4C52A00036FD04 /* session_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001A31F4C52A00036FD04 /* session_4.jpg */; };
-		854001A61F4C52D00036FD04 /* session_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001A51F4C52D00036FD04 /* session_5.jpg */; };
-		854001A81F4C53210036FD04 /* session_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001A71F4C53210036FD04 /* session_6.jpg */; };
-		854001AA1F4C53450036FD04 /* session_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001A91F4C53450036FD04 /* session_7.jpg */; };
-		854001AC1F4C53490036FD04 /* session_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001AB1F4C53490036FD04 /* session_8.jpg */; };
-		854001AE1F4C53790036FD04 /* session_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001AD1F4C53790036FD04 /* session_9.jpg */; };
-		854001B01F4C537E0036FD04 /* session_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854001AF1F4C537E0036FD04 /* session_10.jpg */; };
-		854001B21F4CFFC10036FD04 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 854001B11F4CFFC10036FD04 /* logo.png */; };
-		854001BA1F4D252F0036FD04 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 854001B91F4D252F0036FD04 /* search.png */; };
-		854001BC1F4D25E90036FD04 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 854001BB1F4D25E90036FD04 /* add.png */; };
 		854001C41F4E728C0036FD04 /* DoNotEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001C31F4E728C0036FD04 /* DoNotEnterViewController.swift */; };
 		854001C61F4E72C90036FD04 /* DoEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854001C51F4E72C90036FD04 /* DoEnterViewController.swift */; };
 		85F542AE1F3971C4005AE3E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */; };
@@ -46,33 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8532F6051F4FB3CA00E74F17 /* not_enter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = not_enter.gif; sourceTree = "<group>"; };
-		8532F60B1F4FC1BC00E74F17 /* ecumerun_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecumerun_button.png; sourceTree = "<group>"; };
-		8532F60D1F4FC22700E74F17 /* ecumerun_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecumerun_button2.png; sourceTree = "<group>"; };
-		8532F60F1F4FC2DF00E74F17 /* hash_bs17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hash_bs17.png; sourceTree = "<group>"; };
-		8532F6131F4FC9C300E74F17 /* kaopass_wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kaopass_wall.png; sourceTree = "<group>"; };
-		8532F6151F4FE4A800E74F17 /* backgraund.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgraund.png; sourceTree = "<group>"; };
 		854001841F41874D0036FD04 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		854001881F44018B0036FD04 /* BluetoothKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BluetoothKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/segue-gyphsbimejnfonayiiecrrygrfsx/Build/Products/Debug-iphoneos/BluetoothKit/BluetoothKit.framework"; sourceTree = "<group>"; };
 		8540018A1F440B750036FD04 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		8540018C1F451D550036FD04 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		854001901F4561A30036FD04 /* ImageViewBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewBaseController.swift; sourceTree = "<group>"; };
 		854001921F4BF4FF0036FD04 /* TimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
-		854001951F4BF8530036FD04 /* session_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_0.jpg; sourceTree = "<group>"; };
 		8540019B1F4C4AC50036FD04 /* sessions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessions.json; sourceTree = "<group>"; };
-		8540019D1F4C519F0036FD04 /* session_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_1.jpg; sourceTree = "<group>"; };
-		8540019F1F4C51E90036FD04 /* session_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_2.jpg; sourceTree = "<group>"; };
-		854001A11F4C52160036FD04 /* session_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_3.jpg; sourceTree = "<group>"; };
-		854001A31F4C52A00036FD04 /* session_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_4.jpg; sourceTree = "<group>"; };
-		854001A51F4C52D00036FD04 /* session_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_5.jpg; sourceTree = "<group>"; };
-		854001A71F4C53210036FD04 /* session_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_6.jpg; sourceTree = "<group>"; };
-		854001A91F4C53450036FD04 /* session_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_7.jpg; sourceTree = "<group>"; };
-		854001AB1F4C53490036FD04 /* session_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_8.jpg; sourceTree = "<group>"; };
-		854001AD1F4C53790036FD04 /* session_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_9.jpg; sourceTree = "<group>"; };
-		854001AF1F4C537E0036FD04 /* session_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = session_10.jpg; sourceTree = "<group>"; };
-		854001B11F4CFFC10036FD04 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		854001B91F4D252F0036FD04 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
-		854001BB1F4D25E90036FD04 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		854001C31F4E728C0036FD04 /* DoNotEnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoNotEnterViewController.swift; sourceTree = "<group>"; };
 		854001C51F4E72C90036FD04 /* DoEnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoEnterViewController.swift; sourceTree = "<group>"; };
 		85F542AA1F3971C4005AE3E9 /* KaoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,33 +83,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		854001941F4BF83A0036FD04 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				8532F6151F4FE4A800E74F17 /* backgraund.png */,
-				8532F6131F4FC9C300E74F17 /* kaopass_wall.png */,
-				8532F6051F4FB3CA00E74F17 /* not_enter.gif */,
-				8532F60F1F4FC2DF00E74F17 /* hash_bs17.png */,
-				8532F60B1F4FC1BC00E74F17 /* ecumerun_button.png */,
-				8532F60D1F4FC22700E74F17 /* ecumerun_button2.png */,
-				854001B11F4CFFC10036FD04 /* logo.png */,
-				854001BB1F4D25E90036FD04 /* add.png */,
-				854001B91F4D252F0036FD04 /* search.png */,
-				854001951F4BF8530036FD04 /* session_0.jpg */,
-				8540019D1F4C519F0036FD04 /* session_1.jpg */,
-				8540019F1F4C51E90036FD04 /* session_2.jpg */,
-				854001A11F4C52160036FD04 /* session_3.jpg */,
-				854001A31F4C52A00036FD04 /* session_4.jpg */,
-				854001A51F4C52D00036FD04 /* session_5.jpg */,
-				854001A71F4C53210036FD04 /* session_6.jpg */,
-				854001A91F4C53450036FD04 /* session_7.jpg */,
-				854001AB1F4C53490036FD04 /* session_8.jpg */,
-				854001AD1F4C53790036FD04 /* session_9.jpg */,
-				854001AF1F4C537E0036FD04 /* session_10.jpg */,
-			);
-			name = images;
-			sourceTree = "<group>";
-		};
 		85F542A11F3971C4005AE3E9 = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +104,6 @@
 		85F542AC1F3971C4005AE3E9 /* segue */ = {
 			isa = PBXGroup;
 			children = (
-				854001941F4BF83A0036FD04 /* images */,
 				85F542AD1F3971C4005AE3E9 /* AppDelegate.swift */,
 				8540018C1F451D550036FD04 /* Settings.swift */,
 				85F542AF1F3971C4005AE3E9 /* TopViewController.swift */,
@@ -254,30 +186,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				854001A01F4C51E90036FD04 /* session_2.jpg in Resources */,
-				8532F6101F4FC2E000E74F17 /* hash_bs17.png in Resources */,
-				854001AC1F4C53490036FD04 /* session_8.jpg in Resources */,
-				8540019E1F4C519F0036FD04 /* session_1.jpg in Resources */,
-				854001AA1F4C53450036FD04 /* session_7.jpg in Resources */,
-				854001B21F4CFFC10036FD04 /* logo.png in Resources */,
-				854001B01F4C537E0036FD04 /* session_10.jpg in Resources */,
-				854001A81F4C53210036FD04 /* session_6.jpg in Resources */,
-				8532F60E1F4FC22700E74F17 /* ecumerun_button2.png in Resources */,
-				8532F6161F4FE4A800E74F17 /* backgraund.png in Resources */,
 				85F542B81F3971C4005AE3E9 /* LaunchScreen.storyboard in Resources */,
-				854001AE1F4C53790036FD04 /* session_9.jpg in Resources */,
 				85F542B51F3971C4005AE3E9 /* Assets.xcassets in Resources */,
-				854001961F4BF8530036FD04 /* session_0.jpg in Resources */,
-				854001A61F4C52D00036FD04 /* session_5.jpg in Resources */,
-				8532F60C1F4FC1BC00E74F17 /* ecumerun_button.png in Resources */,
 				8540019C1F4C4AC50036FD04 /* sessions.json in Resources */,
-				854001A41F4C52A00036FD04 /* session_4.jpg in Resources */,
-				8532F6061F4FB3CA00E74F17 /* not_enter.gif in Resources */,
-				854001A21F4C52160036FD04 /* session_3.jpg in Resources */,
-				854001BA1F4D252F0036FD04 /* search.png in Resources */,
 				85F542B31F3971C4005AE3E9 /* Main.storyboard in Resources */,
-				8532F6141F4FC9C300E74F17 /* kaopass_wall.png in Resources */,
-				854001BC1F4D25E90036FD04 /* add.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
