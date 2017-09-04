@@ -46,14 +46,14 @@ class SignatureViewController: ImageViewBaseController, UIWebViewDelegate {
         
         photoTimer = Timer.scheduledTimer(timeInterval: photoInterval, target: self, selector: #selector(SignatureViewController.takeStillPicture), userInfo: nil, repeats: true)
         self.webView.delegate = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         let initialUrl = URL(string: "\(Settings.apiBaseUrl)/users/\(self.userId)/signatures/new")
         let request = URLRequest(url: initialUrl!)
         self.webView.loadRequest(request)
         self.webView.dataDetectorTypes = .link
-        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {        
         setupDisplay(hidden: true)
         setupCamera()
     }

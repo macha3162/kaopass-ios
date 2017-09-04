@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class TopViewController: UIViewController {
     
+    @IBOutlet weak var registrationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class TopViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "start_registration"){
+            self.registrationButton.isEnabled = false
+            
             let nextView = segue.destination as! SignatureViewController
             
             var keepAlive = true
