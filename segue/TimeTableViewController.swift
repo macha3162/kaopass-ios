@@ -96,6 +96,7 @@ class TimeTableViewController: UITableViewController {
         if let indexPaths = self.tableView.indexPathsForSelectedRows {
             for i in 0 ..< indexPaths.count {
                 numbers.append(indexPaths[i].row)
+                
             }
         }
         return numbers

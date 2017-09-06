@@ -299,15 +299,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDm-83-8Pk">
                                 <rect key="frame" x="0.0" y="44" width="512" height="724"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kaopass_wall" translatesAutoresizingMaskIntoConstraints="NO" id="75O-qM-Cof">
-                                        <rect key="frame" x="0.0" y="0.0" width="512" height="724"/>
-                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPk-4T-rg5">
+                                        <rect key="frame" x="196" y="293" width="121" height="139"/>
+                                        <state key="normal" image="logo"/>
+                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" red="0.045661531390000003" green="0.65877288580000004" blue="0.40747517350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="75O-qM-Cof" secondAttribute="trailing" id="Ukx-pq-Cgz"/>
-                                    <constraint firstAttribute="bottom" secondItem="75O-qM-Cof" secondAttribute="bottom" id="kgG-AE-2mq"/>
-                                    <constraint firstItem="75O-qM-Cof" firstAttribute="top" secondItem="NDm-83-8Pk" secondAttribute="top" id="oiH-gj-Khw"/>
-                                    <constraint firstItem="75O-qM-Cof" firstAttribute="leading" secondItem="NDm-83-8Pk" secondAttribute="leading" id="yMQ-ll-pZO"/>
+                                    <constraint firstItem="yPk-4T-rg5" firstAttribute="centerY" secondItem="NDm-83-8Pk" secondAttribute="centerY" id="Ps4-aw-85W"/>
+                                    <constraint firstItem="yPk-4T-rg5" firstAttribute="centerX" secondItem="NDm-83-8Pk" secondAttribute="centerX" id="p7J-uH-PUX"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEa-e4-H6r">
@@ -535,13 +535,12 @@
         <image name="add" width="64" height="64"/>
         <image name="backgraund" width="1024" height="768"/>
         <image name="ecumerun_button" width="220" height="48"/>
-        <image name="kaopass_wall" width="563" height="768"/>
         <image name="logo" width="121" height="139"/>
         <image name="not_enter" width="300" height="300"/>
         <image name="search" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="V0h-sf-aE3"/>
         <segue reference="8cL-hi-hPk"/>
-        <segue reference="Mkh-YY-WCm"/>
     </inferredMetricsTieBreakers>
 </document>

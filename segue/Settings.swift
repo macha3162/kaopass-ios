@@ -7,8 +7,10 @@
 //
 
 struct Settings {
-    static let apiBaseUrl = "http://192.168.3.3:3000"
+    // KaoPassAPIのURLを設定する.
+    static let apiBaseUrl = "http://192.168.3.9:3000"
     
+    // 送信画像の品質.
     static let puloadImageSize = 0.8
     static let searchImageSize = 0.6
 }

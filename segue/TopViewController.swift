@@ -44,6 +44,7 @@ class TopViewController: UIViewController {
                             before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
                                 
             }
+            self.registrationButton.isEnabled = true
             
         }
     }
