@@ -1,2 +1,8 @@
-segue.app.dSYM.zip
-segue.ipa
+# Mac
+.DS_Store
+
+#CocoaPod
+Pods/*
+
+kaopass.app.dSYM.zip
+kaopass.ipa
