@@ -145,7 +145,7 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="名前(ひらがな)" id="GU1-tm-2gU">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="exH-v3-qT3">
+                                        <barButtonItem key="rightBarButtonItem" style="done" id="exH-v3-qT3">
                                             <progressView key="customView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="h5u-Fp-Ykg">
                                                 <rect key="frame" x="854" y="21" width="150" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

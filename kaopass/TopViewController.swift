@@ -16,6 +16,7 @@ class TopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.registrationButton.isEnabled = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,8 +45,6 @@ class TopViewController: UIViewController {
                             before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
                                 
             }
-            self.registrationButton.isEnabled = true
-            
         }
     }
     
