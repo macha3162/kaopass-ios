@@ -73,5 +73,5 @@ KaoPassアプリのバックエンドリポジトリは[こちら](https://githu
 
 
 ## License
-[Supported by Synergy Marketing, Inc.](https://synergist.jp/)
+Supported by [Synergy Marketing, Inc.](https://synergist.jp/)
 Licensed under [MIT](LICENSE).
