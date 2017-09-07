@@ -1,7 +1,7 @@
 # KaoPass
 
 イベントのチェックインを、顔認証と手書き認識でおこなえるようにしたiOSアプリです。  
-実行するためには、このアプリととKaoPassのバックエンドを実行する必要があります。  
+実行するためには、このアプリとKaoPassの[バックエンド](https://github.com/macha3162/kaopass-backend)を実行する必要があります。  
 
 ### アプリケーションの概要
 
@@ -65,7 +65,7 @@ struct Settings {
 ## バックエンドへの接続
 
 アプリを立ち上げるとバックエンドと通信を行います。
-KaoPassアプリのバックエンドリポジトリはこちら。
+KaoPassアプリのバックエンドリポジトリは[こちら](https://github.com/macha3162/kaopass-backend)。
 
 ## お問い合わせ
 
