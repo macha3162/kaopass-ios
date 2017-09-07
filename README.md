@@ -1,6 +1,6 @@
 # KaoPass
 
-イベントのチェックインを、顔認証と手書き認識でおこなえるようにしたiOSアプリです。  
+イベントのチェックインを、手書き認識と顔認証でおこなえるようにしたiOSアプリのバックエンドです。  
 実行するためには、このアプリととKaoPassのバックエンドを実行する必要があります。  
 
 ### アプリケーションの概要
@@ -10,7 +10,7 @@
 アプリの動画は[こちら](https://vimeo.com/232448592)からご覧になれます。
 
 #### イベント新規登録
-手書きで名前を入力し、次に興味のあるセッションを選びます。  
+iPadまたはiPhoneの画面に手書きで名前を入力し、次に興味のあるセッションを選びます。  
 なんとそれだけ！以上でチェックインは完了です。
 
 ![KaoPass新規登録](https://media.giphy.com/media/6ekYTjQ5Gx4D6/giphy.gif "新規登録")
@@ -71,5 +71,5 @@ KaoPassアプリのバックエンドリポジトリはこちら。
 
 
 ## License
-
+[Supported by Synergy Marketing, Inc.](https://synergist.jp/)
 Licensed under [MIT](LICENSE).
