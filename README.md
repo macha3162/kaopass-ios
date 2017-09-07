@@ -43,7 +43,9 @@ CocoaPodsが必要です。
 pod install
 ```
 
-## サーバの設定
+実行後に KaoPass.xcworkspace を開いてください。
+
+## バックエンドの設定
 
 Settings.swift に通信先のサーバ情報がかかれています。  
 バックエンドの環境のアドレスを指定してください。
